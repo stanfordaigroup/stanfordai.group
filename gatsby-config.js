@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Student AI Group (SAIG)`,
   },
-  plugins: [`gatsby-plugin-react-helmet`],
-  pathPrefix: `/stanfordai.group`,
+  plugins: [
+  	`gatsby-plugin-react-next`,
+  	`gatsby-plugin-react-helmet`
+  ],
 }
