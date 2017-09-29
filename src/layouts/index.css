@@ -1,5 +1,12 @@
 @import url('https://rsms.me/inter/inter-ui.css');
 
 html {
+  box-sizing: border-box;
   font-family: 'Inter UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.italics {
+  font-style: italic;
 }
