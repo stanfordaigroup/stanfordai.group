@@ -1,0 +1,49 @@
+/*
+ * Footer
+ */
+
+.footer__container {
+  border-top: solid 1px #e8e8e8;
+  padding: 32px 0;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  height: 44px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 24px;
+  position: relative;
+}
+
+.footer::before {
+  background: url('../layouts/images/logo-end.svg') no-repeat;
+  background-size: 21px 44px;
+  content: '';
+  display: block;
+  height: 44px;
+  left: 24px;
+  position: absolute;
+  top: 0;
+  width: 21px;
+}
+
+.footer__copyright {
+  color: #1d1d1d;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 8px 32px;
+  text-decoration: none;
+}
+
+.footer__copyright:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+.footer__text {
+  font-size: 14px;
+  margin: 0 0 0 32px;
+  opacity: 0.7;
+}

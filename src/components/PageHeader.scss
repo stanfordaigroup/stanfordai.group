@@ -1,0 +1,43 @@
+@import '../styles/globals';
+
+.pageHeader__container {
+  background: url('../layouts/images/dash-pattern-dark.svg') repeat-y;
+  background-size: 45px 6px;
+  border-bottom: solid 1px #e8e8e8;
+  padding: 64px 0;
+
+  @include for-tablet-portrait-up {
+    background-size: 85px 6px;
+  }
+}
+
+.pageHeader {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.pageHeader__title {
+  font-size: 36px;
+  font-weight: 900;
+  margin: 0 0 12px 0;
+  max-width: 360px;
+  text-align: center;
+
+  @include for-tablet-portrait-up {
+    font-size: 48px;
+  }
+}
+
+.pageHeader__subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0;
+  max-width: 360px;
+  opacity: 0.7;
+  text-align: center;
+}

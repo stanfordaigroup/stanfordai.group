@@ -2,137 +2,7 @@
 
 .page {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
-}
-
-/*
- * Header
- */
-.header__container {
-  background: url('../layouts/images/header-bg.jpg') no-repeat;
-  background-size: cover;
-  background-color: #CF2B6E;
-
-  // Get the nicely rounded bottom-edge
-  border-radius: 0 0 50% 50% / 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-}
-
-.header__top {
-  align-items: center;
-  display: flex;
-  height: 100px;
-  position: relative;
-
-  @include for-tablet-portrait-up {
-    height: 150px;
-  }
-}
-
-.header_dashes {
-  background: url('../layouts/images/dash-pattern.svg') transparent;
-  background-size: 85px 6px;
-  width: 45px;
-  height: 100px;
-  position: absolute;
-  opacity: 0.2;
-  top: 0;
-
-  @include for-tablet-portrait-up {
-    height: 100%;
-    width: 85px;
-  }
-}
-
-.header__logo-link {
-  font-size: 0;
-  transition: opacity 100ms ease;
-}
-
-.header__logo-link:hover {
-  opacity: 0.7;
-}
-
-.header__logo {
-  height: 49px;
-  margin-left: 24px;
-  width: 108px;
-
-  @include for-tablet-portrait-up {
-    margin-left: 64px;
-  }
-}
-
-.header__navbar {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  margin: 24px;
-
-  @include for-tablet-portrait-up {
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-right: 64px;
-  }
-}
-
-.header__navbar a {
-  color: #fff;
-  font-size: 16px;
-  margin: 4px 0;
-  opacity: 0.8;
-  text-align: right;
-  text-decoration: none;
-  transition: opacity 100ms ease;
-
-  @include for-tablet-portrait-up {
-    margin: 0 0 0 48px;
-  }
-}
-
-.header__navbar a:hover {
-  opacity: 0.5;
-  text-decoration: underline;
-}
-
-.header__divider {
-  background-color: #fff;
-  border: 0;
-  height: 1px;
-  opacity: 0.2;
-  margin: 0;
-  width: 100%;
-
-  @include for-tablet-portrait-up {
-    display: none;
-  }
-}
-
-.header__hero {
-  color: #fff;
-  font-size: 32px;
-  font-weight: 900;
-  letter-spacing: -1.4px;
-  line-height: 36px;
-  margin: 64px 24px 106px;
-  text-align: center;
-
-  @include for-tablet-portrait-up {
-    margin: 0 auto 124px;
-    max-width: 480px;
-  }
-
-  @include for-tablet-landscape-up {
-    font-size: 48px;
-    line-height: 48px;
-    margin: 48px auto 148px;
-    max-width: 580px;
-  }
 }
 
 /*
@@ -187,7 +57,9 @@
   border-radius: 8px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
   color: #fff;
+  margin: 0 auto;
   max-width: 280px;
+  position: relative;
 
   animation-name: messageFadeIn;
   animation-duration: 500ms;
@@ -214,12 +86,63 @@
   animation-delay: 1200ms;
 }
 
+.messages__message-slack {
+  background-color: #fff;
+  border: solid 1px #d4d4d4;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  color: #1d1d1d;
+  display: block;
+  padding: 12px 0;
+  text-decoration: none;
+  width: 240px;
+
+  transition: opacity 100ms ease;
+}
+
+.messages__message-slack:hover {
+  opacity: 0.7;
+}
+
+.messages__message-slack h3 {
+  font-size: 16px;
+  margin: 0 0 0 64px;
+}
+
+.messages__message-slack h3::before {
+  background: url('../layouts/images/icon-slack.svg') no-repeat;
+  background-size: 24px 24px;
+  content: '';
+  display: block;
+  height: 24px;
+  position: absolute;
+  left: 20px;
+  top: 18px;
+  width: 24px;
+
+  transition: transform 800ms ease;
+}
+
+.messages__message-slack:hover h3::before {
+  transform: rotate(360deg);
+}
+
+.messages__message-slack p {
+  margin: 0 0 0 64px;
+  padding: 0;
+  opacity: 0.7;
+}
+
 /*
  * Content
  */
 
 .content__container {
   flex: 1;
+  margin-bottom: 24px;
+
+  @include for-tablet-landscape-up {
+    margin-bottom: 48px;
+  }
 }
 
 /*
@@ -253,6 +176,7 @@
 }
 
 .bullets__bullet-icon {
+  align-self: center;
   align-items: center;
   background-image: linear-gradient(-236deg, #E33535 0%, #CF2B6E 100%);
   box-shadow: 0 1px 6px 0 rgba(0,0,0,0.20);
@@ -303,36 +227,4 @@
   opacity: 0.7;
   margin: 0;
   max-width: 260px;
-}
-
-/*
- * Footer
- */
-
-.footer__container {
-  border-top: solid 1px #e8e8e8;
-  padding: 32px 0;
-}
-
-.footer {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 24px;
-}
-
-.footer__logo-end {
-  float: left;
-  margin-right: 20px;
-}
-
-.footer__copyright {
-  font-size: 14px;
-  font-weight: 700;
-  margin: 0 0 8px;
-}
-
-.footer__text {
-  font-size: 14px;
-  margin: 0;
-  opacity: 0.7;
 }

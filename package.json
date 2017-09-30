@@ -6,9 +6,14 @@
   "dependencies": {
     "gatsby": "^1.9.42",
     "gatsby-link": "^1.6.15",
+    "gatsby-plugin-catch-links": "^1.0.8",
     "gatsby-plugin-react-helmet": "^1.0.5",
     "gatsby-plugin-react-next": "^1.0.4",
-    "gatsby-plugin-sass": "^1.0.12"
+    "gatsby-plugin-sass": "^1.0.12",
+    "gatsby-plugin-typescript": "^1.4.8",
+    "gatsby-source-filesystem": "^1.5.1",
+    "gatsby-transformer-remark": "^1.7.15",
+    "tslint": "^5.7.0"
   },
   "keywords": [
     "gatsby"
@@ -23,6 +28,11 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "devDependencies": {
+    "@types/graphql": "^0.11.4",
+    "@types/node": "^8.0.31",
+    "@types/react": "^16.0.7",
+    "@types/react-helmet": "^5.0.3",
+    "@types/react-router-dom": "^4.0.8",
     "gh-pages": "^1.0.0",
     "prettier": "^1.6.1"
   }

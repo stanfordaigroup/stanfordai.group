@@ -1,0 +1,152 @@
+@import '../styles/globals';
+
+/*
+ * Header
+ */
+.header__container {
+  background: url('../layouts/images/header-bg.jpg') no-repeat;
+  background-size: cover;
+  background-color: #CF2B6E;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.header__home {
+  // Get the nicely rounded bottom-edge
+  border-radius: 0 0 50% 50% / 10%;
+}
+
+.header__top {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  position: relative;
+
+  @include for-tablet-portrait-up {
+    height: 150px;
+  }
+}
+
+.header__dashes {
+  background: url('../layouts/images/dash-pattern.svg') transparent;
+  background-size: 85px 6px;
+  width: 45px;
+  height: 100%;
+  position: absolute;
+  opacity: 0.2;
+  top: 0;
+
+  @include for-tablet-portrait-up {
+    width: 85px;
+  }
+}
+
+.header__home .header__dashes {
+  height: 100px;
+
+  @include for-tablet-portrait-up {
+    height: 100%;
+  }
+}
+
+.header__logo-link {
+  font-size: 0;
+  transition: opacity 100ms ease;
+}
+
+.header__logo-link:hover {
+  opacity: 0.7;
+}
+
+.header__logo {
+  height: 49px;
+  margin-left: 21px;
+  width: 108px;
+
+  @include for-tablet-portrait-up {
+    margin-left: 61px;
+  }
+}
+
+.header__navbar {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 24px;
+
+  @include for-tablet-portrait-up {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 64px;
+  }
+}
+
+.header__navbar a {
+  color: #fff;
+  font-size: 16px;
+  margin: 4px 0;
+  opacity: 0.8;
+  text-align: right;
+  text-decoration: none;
+  transition: opacity 100ms ease;
+
+  @include for-tablet-portrait-up {
+    margin: 0 0 0 48px;
+  }
+}
+
+.header__navbar a:hover {
+  opacity: 0.5;
+  text-decoration: underline;
+}
+
+.header__navbar--active {
+  color: #fff;
+  font-weight: 700;
+  margin: 4px 0;
+  opacity: 1;
+  text-align: right;
+
+  @include for-tablet-portrait-up {
+    margin: 0 0 0 48px;
+  }
+}
+
+.header__divider {
+  background-color: #fff;
+  border: 0;
+  height: 1px;
+  opacity: 0.2;
+  margin: 0;
+  width: 100%;
+
+  @include for-tablet-portrait-up {
+    display: none;
+  }
+}
+
+.header__hero {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -1.4px;
+  line-height: 36px;
+  margin: 64px 24px 106px;
+  text-align: center;
+
+  @include for-tablet-portrait-up {
+    margin: 0 auto 124px;
+    max-width: 480px;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 48px;
+    line-height: 48px;
+    margin: 48px auto 148px;
+    max-width: 580px;
+  }
+}

@@ -1,0 +1,61 @@
+@import '../styles/globals';
+
+.permalinkPage__content {
+  margin: 64px auto;
+  max-width: 800px;
+
+  @include for-tablet-portrait-up {
+    margin: 120px auto;
+  }
+}
+
+.permalinkPage__content > h1 {
+  font-size: 24px;
+  font-weight: 900;
+  margin: 8px auto 16px;
+  max-width: 640px;
+  text-align: center;
+}
+
+.permalinkPage__content > h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 12px;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.permalinkPage__content > h3 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 48px 0 12px;
+  opacity: 0.8;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.permalinkPage__content > p {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0 auto 32px;
+  max-width: 540px;
+  padding: 0 24px;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.permalinkPage__content > hr {
+  background-color: #f5f5f5;
+  border: 0;
+  height: 2px;
+  margin: 48px auto;
+  width: 64px;
+}
+
+.permalinkPage__subtitle {
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.7;
+  text-align: center;
+}
