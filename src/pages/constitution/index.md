@@ -60,9 +60,6 @@ The Vice President of Ethics and Compliance is responsible for organizing and ru
 ### Vice President(s) of Public Relations
 The Vice President of Communication is responsible for with Industry clients for mentorship projects that are guided by Industry mentors. Also website. 
 
-### Vice President of Human Resources
-The Vice President of Social Outreach is responsible for organizing recruitment outreach and social events to help SAIG onboard new members and retain old members.
-
 ### Board
 Board Members are responsible for making executive decisions that impact the organization as a whole. The board includes the President, the CFO, and the Vice Presidents.
 

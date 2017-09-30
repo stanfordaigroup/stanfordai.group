@@ -47,3 +47,11 @@ Founded in 2017, Student AI Group (SAIG) is a student organization at Stanford U
 <small>Board Members</small>
 
 ---
+
+### Colophon
+
+Website created by [Andrew Lee](https://andrewlee.design/), open source on [GitHub](https://github.com/andrewsoohwanlee/stanfordai.group).
+
+---
+
+![Recruitment Posters](./images/about-posters.png)

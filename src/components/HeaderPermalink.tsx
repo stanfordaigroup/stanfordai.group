@@ -17,30 +17,18 @@ const Header : React.StatelessComponent<Props> = props => (
         <img className="header__logo" src={Logo} alt="Stanford AI Group" />
       </Link>
       <nav className="header__navbar">
-        {props.pathname === '/constitution' ? (
-          <div className="header__navbar--active">
-            Constitution
-          </div>
-          ) : (
-            <Link
-              to="/constitution"
-            >
-              Constitution
-            </Link>
-          )
-        }
-        {props.pathname === '/about' ? (
-          <div className="header__navbar--active">
-            About
-          </div>
-          ) : (
-            <Link
-              to="/about"
-            >
-              About
-            </Link>
-          )
-        }
+        <Link
+          to="/constitution"
+          activeClassName="header__navbar--active"
+        >
+          Constitution
+        </Link>
+        <Link
+          to="/about"
+          activeClassName="header__navbar--active"
+        >
+          About
+        </Link>
       </nav>
     </div>
   </header>

@@ -8,7 +8,7 @@ type Props = {
   data: any,
 };
 
-const Template: React.StatelessComponent<Props> = props => {
+const PermalinkPageTemplate: React.StatelessComponent<Props> = props => {
   const { data } = props; // data.markdownRemark holds our post data
 
   const post = data.markdownRemark;
@@ -29,7 +29,7 @@ const Template: React.StatelessComponent<Props> = props => {
   );
 }
 
-export default Template;
+export default PermalinkPageTemplate;
 
 export const pageQuery = graphql`
 query BlogPostByPath($path: String!) {

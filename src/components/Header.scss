@@ -104,7 +104,7 @@
   text-decoration: underline;
 }
 
-.header__navbar--active {
+.header__navbar .header__navbar--active {
   color: #fff;
   font-weight: 700;
   margin: 4px 0;
@@ -114,6 +114,11 @@
   @include for-tablet-portrait-up {
     margin: 0 0 0 48px;
   }
+}
+
+.header__navbar .header__navbar--active:hover {
+  opacity: 1;
+  text-decoration: none;
 }
 
 .header__divider {

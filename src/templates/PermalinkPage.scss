@@ -36,12 +36,12 @@
 }
 
 .permalinkPage__content > p {
+  color: #555;
   font-size: 18px;
   line-height: 26px;
   margin: 0 auto 32px;
   max-width: 540px;
   padding: 0 24px;
-  opacity: 0.7;
   text-align: center;
 }
 
@@ -51,6 +51,16 @@
   height: 2px;
   margin: 48px auto;
   width: 64px;
+}
+
+.permalinkPage__content > p a {
+  color: #1d1d1d;
+  font-weight: 600;
+  transition: opacity 100ms ease;
+}
+
+.permalinkPage__content > p a:hover {
+  opacity: 0.7;
 }
 
 .permalinkPage__subtitle {
