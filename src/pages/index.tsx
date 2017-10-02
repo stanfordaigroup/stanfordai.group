@@ -18,13 +18,13 @@ const IndexPage = () => {
           <p><strong>SAIG</strong> is a student group which wants to be a part of shaping the future of artificial intelligence. We care about the tech <span className="italics">and</span> the ethics involved.</p>
         </div>
         <a 
-          href="https://join.slack.com/t/stanfordaigroup/shared_invite/enQtMTkyNDIyNjkzMzQ5LTMxMzJlYjY5MGJlOTA5OGNjOWQ5NDMyMGUzNGQ5NmE3MzdmYWYzMDU4YTViMjZkODlhNmI0MGRmNGM5YmMwMDg"
-          className="messages__message messages__message-slack messages__message-2"
+          href="https://www.surveymonkey.com/r/stanfordai"
+          className="messages__message messages__message-survey messages__message-2"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <h3>Join us on Slack</h3>
-          <p>Give us a hello! 👋</p>
+          <h3>Join us today</h3>
+          <p>Sign up for our mailing list! 👋</p>
         </a>
       </div>
       <div className="content__container">

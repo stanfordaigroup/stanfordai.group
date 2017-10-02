@@ -86,7 +86,8 @@
   animation-delay: 1200ms;
 }
 
-.messages__message-slack {
+.messages__message-slack,
+.messages__message-survey {
   background-color: #fff;
   border: solid 1px #d4d4d4;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
@@ -99,11 +100,17 @@
   transition: opacity 100ms ease;
 }
 
-.messages__message-slack:hover {
+.messages__message-survey {
+  width: 280px;
+}
+
+.messages__message-slack:hover,
+.messages__message-survey:hover {
   opacity: 0.7;
 }
 
-.messages__message-slack h3 {
+.messages__message-slack h3,
+.messages__message-survey h3 {
   font-size: 16px;
   margin: 0 0 0 64px;
 }
@@ -125,8 +132,27 @@
 .messages__message-slack:hover h3::before {
   transform: rotate(360deg);
 }
+.messages__message-survey:hover h3::before {
+  transform: rotate(360deg);
+}
 
-.messages__message-slack p {
+.messages__message-survey h3::before {
+  background: url('../layouts/images/icon-file-plus.svg') no-repeat;
+  background-size: 22px 22px;
+  content: '';
+  display: block;
+  height: 22px;
+  opacity: 0.7;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 22px;
+
+  transition: transform 800ms ease;
+}
+
+.messages__message-slack p,
+.messages__message-survey p {
   margin: 0 0 0 64px;
   padding: 0;
   opacity: 0.7;

@@ -35,6 +35,7 @@
   font-weight: 700;
   margin: 0 0 8px 32px;
   text-decoration: none;
+  width: 100px;
 }
 
 .footer__copyright:hover {
@@ -44,6 +45,24 @@
 
 .footer__text {
   font-size: 14px;
-  margin: 0 0 0 32px;
+  margin: 0 32px;
   opacity: 0.7;
+}
+
+.footer__facebook {
+  background: url('../layouts/images/icon-facebook.svg') no-repeat;
+  background-size: 24px 24px;
+  height: 24px;
+  font-size: 0;
+  opacity: 0.5;
+  position: absolute;
+  right: 24px;
+  top: 10px;
+  width: 24px;
+
+  transition: opacity 200ms ease;
+}
+
+.footer__facebook:hover {
+  opacity: 1;
 }
