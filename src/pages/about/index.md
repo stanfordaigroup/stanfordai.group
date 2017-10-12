@@ -38,11 +38,14 @@ Founded in 2017, Student AI Group (SAIG) is a student organization at Stanford U
 **Junwon Park**<br />
 <small>President</small>
 
-**Joseph Nicolls** <small>*&*</small> **Roma Dziembaj**<br />
-<small>Vice Presidents of Operations</small>
-
 **Tucker Haas**<br />
 <small>Chief Financial Officer</small>
+
+**Andrew Lee**<br />
+<small>Vice President of Public Relations</small>
+
+**Joseph Nicolls** <small>*&*</small> **Roma Dziembaj**<br />
+<small>Vice Presidents of Operations</small>
 
 **John Romano** <small>*&*</small> **Prasad Kawthekar**<br />
 <small>Vice Presidents of Technical Education</small>
@@ -50,11 +53,8 @@ Founded in 2017, Student AI Group (SAIG) is a student organization at Stanford U
 **Andrew Lesh** <small>*&*</small> **Dylan Bedford**<br />
 <small>Vice Presidents of Ethical Education</small>
 
-**Andrew Lee**<br />
-<small>Vice President of Public Relations</small>
-
-**Alex Long** <small>*&*</small> **Neil Movva**<br />
-<small>Board Members</small>
+**Alex Long**<br />
+<small>Ex Officio Board Member</small>
 
 ---
 
