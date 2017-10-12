@@ -11,13 +11,23 @@ Founded in 2017, Student AI Group (SAIG) is a student organization at Stanford U
 
 <div>
   <a
-    href="https://join.slack.com/t/stanfordaigroup/shared_invite/enQtMTkyNDIyNjkzMzQ5LTMxMzJlYjY5MGJlOTA5OGNjOWQ5NDMyMGUzNGQ5NmE3MzdmYWYzMDU4YTViMjZkODlhNmI0MGRmNGM5YmMwMDg"
-    class="messages__message messages__message-slack"
+    href="https://www.surveymonkey.com/r/stanfordai"
+    class="messages__message messages__message-survey"
     rel="noopener noreferrer"
     target="_blank"
   >
-    <h3>Join us on Slack</h3>
-    <p>Give us a hello! 👋</p>
+    <h3>Join us today</h3>
+    <p>Sign up for our mailing list! 👋</p>
+  </a>
+  <br />
+  <a
+    href="https://www.facebook.com/groups/stanfordaigroup/"
+    class="messages__message messages__message-facebook"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <h3>Join us on Facebook</h3>
+    <p>Our group doesn't bite.</p>
   </a>
 </div>
 
@@ -54,4 +64,4 @@ Website created by [Andrew Lee](https://andrewlee.design/), open source on [GitH
 
 ---
 
-![Recruitment Posters](./images/about-posters.png)
+![Recruitment Posters](./images/recruitment-posters.png)

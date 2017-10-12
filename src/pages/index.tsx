@@ -26,6 +26,15 @@ const IndexPage = () => {
           <h3>Join us today</h3>
           <p>Sign up for our mailing list! 👋</p>
         </a>
+        <a
+          href="https://www.facebook.com/groups/stanfordaigroup/"
+          className="messages__message messages__message-facebook messages__message-3"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <h3>Join us on Facebook</h3>
+          <p>Our group doesn't bite.</p>
+        </a>
       </div>
       <div className="content__container">
         <div className="bullets__container">
@@ -40,7 +49,7 @@ const IndexPage = () => {
             <div className="bullets__bullet-icon" />
             <div className="bullets__bullet-content">
               <h3>World Class Speakers</h3>
-              <p>We host technical lectures for novices and experts alike.</p>
+              <p>We invite the world’s experts to share their work.</p>
             </div>
           </div>
           <div className="bullets__bullet bullets__bullet-tutorials">

@@ -21,7 +21,7 @@
 }
 
 .messages__container {
-  height: 180px;
+  height: 240px;
   margin: 0 auto;
   position: relative;
   top: -50px;
@@ -83,11 +83,17 @@
 }
 
 .messages__message-2 {
+  margin-bottom: 8px;
   animation-delay: 1200ms;
 }
 
+.messages__message-3 {
+  animation-delay: 2000ms;
+}
+
 .messages__message-slack,
-.messages__message-survey {
+.messages__message-survey,
+.messages__message-facebook {
   background-color: #fff;
   border: solid 1px #d4d4d4;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
@@ -100,22 +106,25 @@
   transition: opacity 100ms ease;
 }
 
-.messages__message-survey {
+.messages__message-survey,
+.messages__message-facebook {
   width: 280px;
 }
 
 .messages__message-slack:hover,
-.messages__message-survey:hover {
+.messages__message-survey:hover,
+.messages__message-facebook:hover {
   opacity: 0.7;
 }
 
 .messages__message-slack h3,
-.messages__message-survey h3 {
+.messages__message-survey h3,
+.messages__message-facebook h3 {
   font-size: 16px;
   margin: 0 0 0 64px;
 }
 
-.messages__message-slack h3::before {
+.messages__message-slack h3::before, {
   background: url('../layouts/images/icon-slack.svg') no-repeat;
   background-size: 24px 24px;
   content: '';
@@ -127,13 +136,6 @@
   width: 24px;
 
   transition: transform 800ms ease;
-}
-
-.messages__message-slack:hover h3::before {
-  transform: rotate(360deg);
-}
-.messages__message-survey:hover h3::before {
-  transform: rotate(360deg);
 }
 
 .messages__message-survey h3::before {
@@ -151,8 +153,30 @@
   transition: transform 800ms ease;
 }
 
+.messages__message-facebook h3::before {
+  background: url('../layouts/images/icon-facebook-blue.svg') no-repeat;
+  background-size: 22px 22px;
+  content: '';
+  display: block;
+  height: 22px;
+  opacity: 0.7;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 22px;
+
+  transition: transform 800ms ease;
+}
+
+.messages__message-slack:hover h3::before,
+.messages__message-survey:hover h3::before,
+.messages__message-facebook:hover h3::before {
+  transform: rotate(360deg);
+}
+
 .messages__message-slack p,
-.messages__message-survey p {
+.messages__message-survey p,
+.messages__message-facebook p {
   margin: 0 0 0 64px;
   padding: 0;
   opacity: 0.7;
