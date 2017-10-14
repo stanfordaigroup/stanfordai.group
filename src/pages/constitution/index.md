@@ -88,5 +88,3 @@ The group may only be dissolved by a unanimous decision of the ten board members
 
 # Procedure to Amend Constitution
 This constitution may be amended with the unanimous decision of the ten board members.
-
----

@@ -2,7 +2,7 @@
 path: "/archives"
 date: "2017-07-12T17:12:33.962Z"
 title: "Archives"
-subtitle: "Past meeting notes, events, and more."
+subtitle: "Past meeting notes, events, and more. 🗃"
 ---
 
 <div class="permalinkPage__subtitle">&ldquo;First Meeting&rdquo;</div>
@@ -21,3 +21,9 @@ Our first meeting as a public student organization. Started with introductions o
 ### Slides
 
 1. [Student AI Group — Intro](/12-10-17/student-ai-group-intro.pdf)
+
+### Posters
+
+1. [Ad Flyer 1](/12-10-17/flyer-1.pdf)
+2. [Ad Flyer 2](/12-10-17/flyer-2.pdf)
+3. [Ad Flyer 3](/12-10-17/flyer-3.pdf)
