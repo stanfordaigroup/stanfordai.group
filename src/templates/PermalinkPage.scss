@@ -53,13 +53,15 @@
   width: 64px;
 }
 
-.permalinkPage__content > p a {
+.permalinkPage__content > p a,
+.permalinkPage__content > ol li a {
   color: #1d1d1d;
   font-weight: 600;
   transition: opacity 100ms ease;
 }
 
-.permalinkPage__content > p a:hover {
+.permalinkPage__content > p a:hover,
+.permalinkPage__content > ol li a:hover {
   opacity: 0.7;
 }
 
@@ -68,4 +70,36 @@
   font-weight: 700;
   opacity: 0.7;
   text-align: center;
+}
+
+.permalinkPage__content > ol {
+  font-size: 14px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.permalinkPage__content > ol li a {
+  color: #E33535;
+  // font-weight: normal;
+}
+
+.permalinkPage__content > ol li {
+  counter-increment: step-counter;
+  display: flex;  
+  margin: 12px 12px;
+  justify-content: center;
+}
+
+.permalinkPage__content > ol li::before {
+  content: counter(step-counter);
+  display: flex;
+  margin-right: 12px;
+  font-size: 8px;
+  background-color: #E33535;
+  color: white;
+  font-weight: bold;
+  padding: 5px 4px 4px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
 }

@@ -24,6 +24,12 @@ const Header : React.StatelessComponent<Props> = props => (
           Constitution
         </Link>
         <Link
+          to="/archives"
+          activeClassName="header__navbar--active"
+        >
+          Archives
+        </Link>
+        <Link
           to="/about"
           activeClassName="header__navbar--active"
         >

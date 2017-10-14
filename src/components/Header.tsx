@@ -14,6 +14,7 @@ const Header: React.StatelessComponent = () => (
       </Link>
       <nav className="header__navbar">
         <Link to="/constitution">Constitution</Link>
+        <Link to="/archives">Archives</Link>
         <Link to="/about">About</Link>
       </nav>
     </div>
