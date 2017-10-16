@@ -17,6 +17,7 @@ Our first meeting as a public student organization. Started with introductions o
 
 1. [SAIG — First Meeting Tomorrow @ 7pm](http://stanfordai.group/12-10-17/email-1.html)
 2. [[ACTION REQUIRED] Follow-Up After Our First Meeting](http://stanfordai.group/12-10-17/email-2.html)
+2. [SAIG — Internship Applications Open!](http://stanfordai.group/12-10-17/email-3.html)
 
 ### Slides
 
