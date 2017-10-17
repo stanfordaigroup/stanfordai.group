@@ -5,6 +5,20 @@ title: "Archives"
 subtitle: "Past meeting notes, events, and more. 🗃"
 ---
 
+<div class="permalinkPage__subtitle">&ldquo;1st Technical Workshop&rdquo;</div>
+
+# Oct. 19, 2017
+
+---
+
+Our 2nd meeting; a workshop teaching basic neural network usage.
+
+### Emails
+
+1. [SAIG — First Workshop This Thursday! (10/19 @ 7PM)](http://stanfordai.group/12-19-17/email-1.html)
+
+---
+
 <div class="permalinkPage__subtitle">&ldquo;First Meeting&rdquo;</div>
 
 # Oct. 12, 2017
