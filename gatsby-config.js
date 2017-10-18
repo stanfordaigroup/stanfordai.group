@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Student AI Group (SAIG)`,
+    siteUrl: `http://stanfordai.group`,
   },
   plugins: [
     `gatsby-plugin-react-next`,
@@ -40,5 +41,15 @@ module.exports = {
         purifyOptions: {}
       }
     },
+    {
+      resolve: `gatsby-plugin-sitemap`
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `tomato`,
+        showSpinner: false,
+      }
+    }
   ],
 }
