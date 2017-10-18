@@ -1,9 +1,10 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "stanfordai.group",
+  "description": "Source code for the Stanford AI Group webpage.",
+  "version": "0.1",
+  "author": "Andrew Lee <hi@andrewlee.design>",
   "dependencies": {
+    "@types/invariant": "^2.2.29",
     "gatsby": "^1.9.42",
     "gatsby-link": "^1.6.15",
     "gatsby-plugin-catch-links": "^1.0.8",
@@ -19,10 +20,12 @@
     "gatsby-remark-images": "^1.5.13",
     "gatsby-source-filesystem": "^1.5.1",
     "gatsby-transformer-remark": "^1.7.15",
+    "human-date": "^1.4.0",
+    "invariant": "^2.2.2",
     "tslint": "^5.7.0"
   },
   "keywords": [
-    "gatsby"
+    "saig"
   ],
   "license": "MIT",
   "main": "n/a",
@@ -41,5 +44,6 @@
     "@types/react-router-dom": "^4.0.8",
     "gh-pages": "^1.0.0",
     "prettier": "^1.6.1"
-  }
+  },
+  "repository": "https://github.com/stanfordaigroup/stanfordai.group.git"
 }

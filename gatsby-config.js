@@ -10,6 +10,12 @@ module.exports = {
   	`gatsby-plugin-sass`,
     `gatsby-plugin-typescript`,
     {
+      resolve: `gatsby-source-google-calendar`,
+      options: {
+        username: 'andrewlee-design',
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
