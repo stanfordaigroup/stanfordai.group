@@ -4,7 +4,7 @@
   "author": "Andrew Lee <hi@andrewlee.design>",
   "dependencies": {
     "crypto": "^1.0.1",
-    "node-google-calendar": "^1.1.0",
+    "node-google-calendar": "^1.1.0"
   },
   "keywords": [
     "gatsby"
@@ -12,6 +12,6 @@
   "license": "MIT",
   "main": "index.js",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "babel-cli": "^6.26.0"
   }
 }

@@ -11,9 +11,6 @@ module.exports = {
     `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-source-google-calendar`,
-      options: {
-        username: 'andrewlee-design',
-      },
     },
     {
       resolve: `gatsby-source-filesystem`,
