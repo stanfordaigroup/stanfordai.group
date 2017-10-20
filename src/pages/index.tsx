@@ -17,24 +17,27 @@ const IndexPage = () => {
         <div className="messages__message messages__message-1">
           <p><strong>SAIG</strong> is a student group which wants to be a part of shaping the future of artificial intelligence. We care about the tech <span className="italics">and</span> the ethics involved.</p>
         </div>
-        <a 
-          href="https://www.surveymonkey.com/r/stanfordai"
-          className="messages__message messages__message-survey messages__message-2"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <h3>Join us today</h3>
-          <p>Sign up for our mailing list! 👋</p>
-        </a>
-        <a
-          href="https://www.facebook.com/groups/stanfordaigroup/"
-          className="messages__message messages__message-facebook messages__message-3"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <h3>Join us on Facebook</h3>
-          <p>Our group doesn't bite.</p>
-        </a>
+        <div className="messages__message messages__message-combo messages__message-2">
+          <a 
+            href="https://www.surveymonkey.com/r/stanfordai"
+            className="messages__message-survey"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <h3>Join us today!</h3>
+            <p>Sign up for our mailing list!</p>
+          </a>
+          <hr/>
+          <a
+            href="https://www.facebook.com/groups/stanfordaigroup/"
+            className="messages__message-facebook"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <h3>Contact us on Facebook</h3>
+            <p>Our group doesn't bite.</p>
+          </a>
+        </div>
       </div>
       <div className="content__container">
         <div className="bullets__container">
@@ -61,28 +64,37 @@ const IndexPage = () => {
           </div>
         </div>
 
-        <hr className="content__divider" />
+        {/* <hr className="content__divider" />
 
-        <div className="upcomingEvents__container">
-          <div className="upcomingEvents__day">
-            <h2>15<span>Monday</span></h2>
+        <h1 className="upcomingEvents__title">Upcoming Events</h1> */}
+
+        {/* <div className="upcomingEvents__container">
+          <div className="upcomingEvents__day upcomingEvents__day--today">
+            <div className="upcomingEvents__today-marker">Today</div>
+            <h2 className="upcomingEvents__day-title">15<span>Monday</span></h2>
             <div className="upcomingEvents__list">
-              <div className="upcomingEvents__event">
+              <a href="#" className="upcomingEvents__event">
                 <h3>SAIG Board Meeting</h3>
-                <h4>7pm @ 300-300</h4>
-              </div>
+                <h4>Building 300-300, 7pm</h4>
+              </a>
             </div>
           </div>
           <div className="upcomingEvents__day">
-            <h2>16<span>Tuesday</span></h2>
+            <h2 className="upcomingEvents__day-title">16<span>Tuesday</span></h2>
           </div>
           <div className="upcomingEvents__day">
-            <h2>17<span>Wednesday</span></h2>
+            <h2 className="upcomingEvents__day-title">17<span>Wednesday</span></h2>
           </div>
           <div className="upcomingEvents__day">
-            <h2>18<span>Thursday</span></h2>
+            <h2 className="upcomingEvents__day-title">18<span>Thursday</span></h2>
           </div>
-        </div>
+          <div className="upcomingEvents__day">
+            <h2 className="upcomingEvents__day-title">19<span>Friday</span></h2>
+          </div>
+          <div className="upcomingEvents__day">
+            <h2 className="upcomingEvents__day-title">20<span>Saturday</span></h2>
+          </div>
+        </div> */}
       </div>
     </div>
   );
