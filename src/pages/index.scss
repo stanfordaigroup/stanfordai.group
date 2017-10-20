@@ -91,95 +91,95 @@
   animation-delay: 2000ms;
 }
 
-.messages__message-slack,
-.messages__message-survey,
-.messages__message-facebook {
+.messages__message-combo {
   background-color: #fff;
   border: solid 1px #d4d4d4;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
-  color: #1d1d1d;
   display: block;
-  padding: 12px 0;
-  text-decoration: none;
-  width: 240px;
+  width: 270px;
 
   transition: opacity 100ms ease;
 }
 
-.messages__message-survey,
-.messages__message-facebook {
-  width: 280px;
+.messages__message-combo hr {
+  background: #d4d4d4;
+  border: 0;
+  display: block;
+  height: 1px;
+  margin: 0;
+  width: 100%;
 }
 
-.messages__message-slack:hover,
-.messages__message-survey:hover,
-.messages__message-facebook:hover {
+.messages__message-combo a {
+  color: #1d1d1d;
+  border-radius: 5px;
+  display: block;
+  padding: 12px 0 10px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  
+  transition: opacity 100ms ease;
+}
+
+.messages__message-combo a:hover {
+  background: #fafafa;
   opacity: 0.7;
 }
 
-.messages__message-slack h3,
-.messages__message-survey h3,
-.messages__message-facebook h3 {
+.messages__message-combo h3 {
   font-size: 16px;
   margin: 0 0 0 64px;
 }
 
-.messages__message-slack h3::before, {
-  background: url('../layouts/images/icon-slack.svg') no-repeat;
-  background-size: 24px 24px;
-  content: '';
-  display: block;
-  height: 24px;
-  position: absolute;
-  left: 20px;
-  top: 18px;
-  width: 24px;
-
-  transition: transform 800ms ease;
+.messages__message-combo p {
+  margin: 0 0 0 64px;
+  padding: 0;
+  opacity: 0.7;
 }
+
+// .messages__message-slack h3::before, {
+//   background: url('../layouts/images/icon-slack.svg') no-repeat;
+//   background-size: 24px 24px;
+//   content: '';
+//   display: block;
+//   height: 24px;
+//   position: absolute;
+//   left: 20px;
+//   top: 18px;
+//   width: 24px;
+
+//   transition: transform 800ms ease;
+// }
 
 .messages__message-survey h3::before {
   background: url('../layouts/images/icon-file-plus.svg') no-repeat;
-  background-size: 22px 22px;
-  content: '';
-  display: block;
-  height: 22px;
-  opacity: 0.7;
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  width: 22px;
-
-  transition: transform 800ms ease;
 }
 
 .messages__message-facebook h3::before {
   background: url('../layouts/images/icon-facebook-blue.svg') no-repeat;
+}
+
+.messages__message-survey h3::before,
+.messages__message-facebook h3::before {
   background-size: 22px 22px;
   content: '';
   display: block;
-  height: 22px;
-  opacity: 0.7;
   position: absolute;
+  opacity: 0.7;
+
+  height: 22px;
   left: 20px;
-  top: 20px;
+  top: 18px;
   width: 22px;
 
-  transition: transform 800ms ease;
+  transition: transform 200ms ease;
 }
 
 .messages__message-slack:hover h3::before,
 .messages__message-survey:hover h3::before,
 .messages__message-facebook:hover h3::before {
-  transform: rotate(360deg);
-}
-
-.messages__message-slack p,
-.messages__message-survey p,
-.messages__message-facebook p {
-  margin: 0 0 0 64px;
-  padding: 0;
-  opacity: 0.7;
+  transform: rotate(20deg);
 }
 
 /*
@@ -291,86 +291,170 @@
  * Calendar Events
  */
 
-.upcomingEvents__container {
-  display: flex;
-  flex-direction: column;
-  margin: 32px 24px 0;
-}
-
-.upcomingEvents__subtitle {
-  font-size: 16px;
-  text-align: center;
-  margin: 0;
-}
-
 .upcomingEvents__title {
-  font-size: 24px;
+  font-size: 22px;
+  margin-top: 64px;
   text-align: center;
-  margin: 12px 0 40px;
 }
 
-.upcomingEvents__list {
+.upcomingEvents__container {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 40px auto 40px;
+}
+
+.upcomingEvents__day {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-grow: 1;
+  padding: 8px;
+  position: relative;
+}
 
-  @include for-tablet-portrait-up {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+.upcomingEvents__day--today {
+  border-radius: 5px;
+}
+
+.upcomingEvents__today-marker {
+  background: #E33535;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 4px 6px;
+  position: absolute;
+  text-align: center;
+  top: -10px;
+}
+
+.upcomingEvents__day-title {
+  font-size: 16px;
+  margin: 0;
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.upcomingEvents__day-title span {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0 0 0 8px;
+  opacity: 0.7;
 }
 
 .upcomingEvents__event {
   background-color: #fff;
   border: solid 1px #d4d4d4;
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
   color: #1d1d1d;
   display: block;
-  padding: 18px 24px 18px 32px;
+  padding: 12px;
   text-decoration: none;
 
   transition: opacity 100ms ease;
-
-  @include for-tablet-portrait-up {
-    margin: 0 24px;
-  }
 }
 
 .upcomingEvents__event:hover {
   opacity: 0.7;
 }
 
-.upcomingEvents__event-subtitle {
-  font-size: 12px;
-  opacity: 0.7;
-  margin: 0 0 6px;
-}
-
-.upcomingEvents__event-title{
-  font-size: 16px;
-  margin: 6px 0 12px;
-  position: relative;
-}
-
-.upcomingEvents__event-title:before {
-  background: #E33535;
-  border-radius: 100%;
-  content: '';
-  display: block;
-  height: 6px;
-  position: absolute;
-  left: -16px;
-  top: 6px;
-  width: 6px;
+.upcomingEvents__event h3 {
+  font-size: 14px;
+  margin: 0;
 }
 
 .upcomingEvents__event h4 {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: normal;
-  line-height: 16px;
+  margin: 8px 0 0;
   opacity: 0.7;
-  margin: 6px 0 0;
-  max-width: 260px;
 }
+
+// .upcomingEvents__container {
+//   display: flex;
+//   flex-direction: column;
+//   margin: 32px 24px 0;
+// }
+
+// .upcomingEvents__subtitle {
+//   font-size: 16px;
+//   text-align: center;
+//   margin: 0;
+// }
+
+// .upcomingEvents__title {
+//   font-size: 24px;
+//   text-align: center;
+//   margin: 12px 0 40px;
+// }
+
+// .upcomingEvents__list {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+
+//   @include for-tablet-portrait-up {
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//   }
+// }
+
+// .upcomingEvents__event {
+//   background-color: #fff;
+//   border: solid 1px #d4d4d4;
+//   border-radius: 8px;
+//   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+//   color: #1d1d1d;
+//   display: block;
+//   padding: 18px 24px 18px 32px;
+//   text-decoration: none;
+
+//   transition: opacity 100ms ease;
+
+//   @include for-tablet-portrait-up {
+//     margin: 0 24px;
+//   }
+// }
+
+// .upcomingEvents__event:hover {
+//   opacity: 0.7;
+// }
+
+// .upcomingEvents__event-subtitle {
+//   font-size: 12px;
+//   opacity: 0.7;
+//   margin: 0 0 6px;
+// }
+
+// .upcomingEvents__event-title{
+//   font-size: 16px;
+//   margin: 6px 0 12px;
+//   position: relative;
+// }
+
+// .upcomingEvents__event-title:before {
+//   background: #E33535;
+//   border-radius: 100%;
+//   content: '';
+//   display: block;
+//   height: 6px;
+//   position: absolute;
+//   left: -16px;
+//   top: 6px;
+//   width: 6px;
+// }
+
+// .upcomingEvents__event h4 {
+//   font-size: 14px;
+//   font-weight: normal;
+//   line-height: 16px;
+//   opacity: 0.7;
+//   margin: 6px 0 0;
+//   max-width: 260px;
+// }
