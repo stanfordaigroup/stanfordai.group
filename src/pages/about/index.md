@@ -47,7 +47,7 @@ Founded in 2017, Student AI Group (SAIG) is a student organization at Stanford U
 **Joseph Nicolls** <small>*&*</small> **Roma Dziembaj**<br />
 <small>Vice Presidents of Operations</small>
 
-**John Romano** <small>*&*</small> **Prasad Kawthekar**<br />
+**John Romano** <small>*&*</small> **Prasad Kawthekar** & **Shubhang Desai**<br />
 <small>Vice Presidents of Technical Education</small>
 
 **Andrew Lesh** <small>*&*</small> **Dylan Bedford**<br />
