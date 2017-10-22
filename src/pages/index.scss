@@ -1,5 +1,9 @@
 @import '../styles/globals';
 
+* {
+  box-sizing: border-box;
+}
+
 .page {
   display: flex;
   flex-direction: column;
@@ -199,7 +203,7 @@
   background: #eee;
   border: 0;
   height: 1px;
-  margin: 64px auto 0;
+  margin: 24px auto 48px;
   width: 100%;
 }
 
@@ -291,170 +295,95 @@
  * Calendar Events
  */
 
-.upcomingEvents__title {
-  font-size: 22px;
-  margin-top: 64px;
-  text-align: center;
-}
-
-.upcomingEvents__container {
-  border-radius: 8px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 40px auto 40px;
-}
-
-.upcomingEvents__day {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  padding: 8px;
-  position: relative;
-}
-
-.upcomingEvents__day--today {
-  border-radius: 5px;
-}
-
-.upcomingEvents__today-marker {
-  background: #E33535;
-  border-radius: 5px;
-  color: #fff;
-  display: inline-block;
-  font-size: 10px;
-  font-weight: bold;
-  padding: 4px 6px;
-  position: absolute;
-  text-align: center;
-  top: -10px;
-}
-
-.upcomingEvents__day-title {
-  font-size: 16px;
-  margin: 0;
-  padding: 12px 16px;
-  text-align: center;
-}
-
-.upcomingEvents__day-title span {
-  font-size: 14px;
-  font-weight: normal;
-  margin: 0 0 0 8px;
-  opacity: 0.7;
-}
-
-.upcomingEvents__event {
-  background-color: #fff;
-  border: solid 1px #d4d4d4;
-  border-radius: 5px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
-  color: #1d1d1d;
-  display: block;
-  padding: 12px;
-  text-decoration: none;
-
-  transition: opacity 100ms ease;
-}
-
-.upcomingEvents__event:hover {
-  opacity: 0.7;
-}
-
-.upcomingEvents__event h3 {
-  font-size: 14px;
-  margin: 0;
-}
-
-.upcomingEvents__event h4 {
-  font-size: 12px;
-  font-weight: normal;
-  margin: 8px 0 0;
-  opacity: 0.7;
-}
+// .upcomingEvents__title {
+//   font-size: 22px;
+//   margin-top: 64px;
+//   text-align: center;
+// }
 
 // .upcomingEvents__container {
-//   display: flex;
-//   flex-direction: column;
-//   margin: 32px 24px 0;
-// }
-
-// .upcomingEvents__subtitle {
-//   font-size: 16px;
-//   text-align: center;
-//   margin: 0;
-// }
-
-// .upcomingEvents__title {
-//   font-size: 24px;
-//   text-align: center;
-//   margin: 12px 0 40px;
-// }
-
-// .upcomingEvents__list {
-//   display: flex;
-//   flex-direction: column;
 //   align-items: center;
+//   border-radius: 8px;
+//   display: flex;
+//   flex-direction: column;
+//   flex-wrap: wrap;
 //   justify-content: center;
+//   margin: 40px auto 40px;
+// }
 
-//   @include for-tablet-portrait-up {
-//     flex-direction: row;
-//     flex-wrap: wrap;
-//   }
+// .upcomingEvents__day {
+//   align-items: center;
+//   display: flex;
+//   flex-direction: column;
+//   flex-grow: 1;
+//   padding: 8px;
+//   position: relative;
+// }
+
+// .upcomingEvents__divider {
+//   background: #efefef;
+//   height: 2px;
+//   margin: 24px 0;
+//   width: 30px;
+// }
+
+// .upcomingEvents__day--today {
+//   border-radius: 5px;
+// }
+
+// .upcomingEvents__today-marker {
+//   background: #E33535;
+//   border-radius: 5px;
+//   color: #fff;
+//   display: inline-block;
+//   font-size: 10px;
+//   font-weight: bold;
+//   padding: 4px 6px;
+//   position: absolute;
+//   text-align: center;
+//   top: -10px;
+// }
+
+// .upcomingEvents__day-title {
+//   font-size: 16px;
+//   margin: 0;
+//   padding: 12px 16px;
+//   text-align: center;
+// }
+
+// .upcomingEvents__day-title span {
+//   font-size: 14px;
+//   font-weight: normal;
+//   margin: 0 0 0 8px;
+//   opacity: 0.7;
 // }
 
 // .upcomingEvents__event {
 //   background-color: #fff;
 //   border: solid 1px #d4d4d4;
-//   border-radius: 8px;
+//   border-radius: 5px;
 //   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
 //   color: #1d1d1d;
 //   display: block;
-//   padding: 18px 24px 18px 32px;
+//   padding: 14px 16px;
 //   text-decoration: none;
+//   min-width: 260px;
 
 //   transition: opacity 100ms ease;
-
-//   @include for-tablet-portrait-up {
-//     margin: 0 24px;
-//   }
 // }
 
 // .upcomingEvents__event:hover {
 //   opacity: 0.7;
 // }
 
-// .upcomingEvents__event-subtitle {
-//   font-size: 12px;
-//   opacity: 0.7;
-//   margin: 0 0 6px;
-// }
-
-// .upcomingEvents__event-title{
+// .upcomingEvents__event h3 {
 //   font-size: 16px;
-//   margin: 6px 0 12px;
-//   position: relative;
-// }
-
-// .upcomingEvents__event-title:before {
-//   background: #E33535;
-//   border-radius: 100%;
-//   content: '';
-//   display: block;
-//   height: 6px;
-//   position: absolute;
-//   left: -16px;
-//   top: 6px;
-//   width: 6px;
+//   margin: 0;
 // }
 
 // .upcomingEvents__event h4 {
-//   font-size: 14px;
+//   font-size: 12px;
 //   font-weight: normal;
-//   line-height: 16px;
+//   margin: 8px 0 0;
 //   opacity: 0.7;
-//   margin: 6px 0 0;
-//   max-width: 260px;
 // }
