@@ -71,7 +71,7 @@ President position and the board seats will be filled by election. Any and all r
 Every returning member can declare candidacy in the election. The candidate who has received most votes will be given the President position. Should the candidate decline the position, the position will be filled by the next candidate in the number of votes received. Board seats will be filled by the remaining candidates in the descending order of votes received, up to ten seats.
 
 President will nominate CFO and Vice Presidents from the board, and the board will approve the nomination through majority vote for each nominee.	
-There can be unlimited number of project leaders. Any member who has received 3 nominations from new or returning members can become a project leader through the unanimous (majority?) approval of the board. The Project Leader position does not imply a seat on the Board, but a Board Member can become a Project Leader.
+There can be unlimited number of project leaders. Any member who has received 3 nominations from new or returning members can become a project leader through the unanimous approval of the board. The Project Leader position does not imply a seat on the Board, but a Board Member can become a Project Leader.
 
 Leadership is limited to organization members. Therefore, graduating students cannot declare candidacy or be elected for a leadership position.
 
