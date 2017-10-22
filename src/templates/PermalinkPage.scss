@@ -35,6 +35,16 @@
   text-transform: uppercase;
 }
 
+.permalinkPage__content > h3 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 48px 0 12px;
+  opacity: 0.8;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .permalinkPage__content > p {
   color: #555;
   font-size: 18px;
@@ -65,7 +75,8 @@
   opacity: 0.7;
 }
 
-.permalinkPage__subtitle {
+.permalinkPage__subtitle,
+.permalinkPage__content > h4 {
   font-size: 14px;
   font-weight: 700;
   opacity: 0.7;
@@ -102,4 +113,12 @@
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+}
+
+.permalinkPage__content > h5 {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0 0 8px;
+  opacity: 0.7;
+  text-align: center;
 }

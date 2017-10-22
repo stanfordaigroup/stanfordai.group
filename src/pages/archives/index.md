@@ -5,7 +5,7 @@ title: "Archives"
 subtitle: "Past meeting notes, events, and more. 🗃"
 ---
 
-<div class="permalinkPage__subtitle">&ldquo;1st Technical Workshop&rdquo;</div>
+#### &ldquo;1st Technical Workshop&rdquo;
 
 # Oct. 19, 2017
 
@@ -19,7 +19,7 @@ Our 2nd meeting; a workshop teaching basic neural network usage.
 
 ---
 
-<div class="permalinkPage__subtitle">&ldquo;First Meeting&rdquo;</div>
+#### &ldquo;First Meeting&rdquo;
 
 # Oct. 12, 2017
 

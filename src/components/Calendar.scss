@@ -1,0 +1,145 @@
+@import '../styles/globals';
+
+.calendar__container {
+  border: solid 1px #D4D4D4;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 64px;
+  width: 100%;
+
+  @include for-tablet-portrait-up {
+    margin: 32px auto 96px;
+    max-width: 640px;
+  }
+}
+
+.calendar__header {
+  background-color: #F9F9F9;
+  border-bottom: solid 1px #D4D4D4;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 48px;
+  padding: 16px 24px;
+  width: 100%;
+}
+
+.calendar__count {
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+.calendar__event {
+  align-items: center;
+  color: #363636;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  text-decoration: none;
+
+  transition: opacity 100ms ease;
+}
+
+.calendar__event:hover {
+  background: #fafafa;
+  opacity: 0.7;
+}
+
+.calendar__event-content {
+  margin: 24px 0;
+  padding: 0 32px;
+}
+
+.calendar__event-title {
+  font-size: 15px;
+  margin: 0;
+}
+
+.calendar__event-meta {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 2px 0 0;
+  opacity: 0.7;
+}
+
+.calendar__event-description {
+  font-size: 13px;
+  opacity: 0.7;
+  margin: 16px 0 0;
+}
+
+.calendar__event-dashes {
+  // Basic (uncategorized) color is grey
+  background: url('../layouts/images/dash-pattern-dark.svg') transparent;
+  background-size: 85px 4px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 8px;
+}
+
+.calendar__event--speakers .calendar__event-dashes {
+  background-image: url('../layouts/images/dash-pattern-speakers-yellow.svg');
+}
+
+.calendar__event--workshops .calendar__event-dashes {
+  background-image: url('../layouts/images/dash-pattern-workshops-purple.svg');
+}
+
+.calendar__event--social .calendar__event-dashes {
+  background-image: url('../layouts/images/dash-pattern-social-red.svg');
+}
+
+.calendar__event-date {
+  align-items: center;
+  border-right: solid 1px #E8E8E8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 54px;
+  padding: 0 24px 0 32px;
+  width: 88px;
+}
+
+.calendar__event-month {
+  opacity: 0.5;
+  font-size: 12px;
+}
+
+.calendar__event-day {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.calendar__event-icon {
+  background-color: #dadada;
+  border-radius: 100%;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  height: 56px;
+  position: absolute;
+  right: -28px;
+  width: 56px;
+
+  @include for-tablet-portrait-up {
+    display: block;
+  }
+}
+
+.calendar__event--speakers .calendar__event-icon {
+  background: url('../layouts/images/icon-mic.svg') center no-repeat;
+  background-color: #F8E71C;
+}
+
+.calendar__event--workshops .calendar__event-icon {
+  background: url('../layouts/images/icon-package.svg') center no-repeat;
+  background-color: #7D30C0;
+}
+
+.calendar__event--social .calendar__event-icon {
+  background: url('../layouts/images/icon-users.svg') center no-repeat;
+  background-color: #D0021B;
+}

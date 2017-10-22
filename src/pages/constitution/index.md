@@ -5,7 +5,7 @@ title: "Constitution"
 subtitle: "The founding rules through which we conduct our group’s operations."
 ---
 
-<div class="permalinkPage__subtitle">Article I</div>
+#### Article I
 
 # Name of Organization
 
@@ -13,14 +13,14 @@ The official name of the organization is Stanford Artificial Intelligence Group.
 
 ---
 
-<div class="permalinkPage__subtitle">Article II</div>
+#### Article II
 
 # Statement of Purpose 
 SAIG is a student-run organization that furthers education and provides project opportunities for Stanford students interested in the field of artificial intelligence in order to equip them with technical skills and the ability to think critically about the technologies they employ.
 
 ---
 
-<div class="permalinkPage__subtitle">Article III</div>
+#### Article III
 
 # Activities and Guidelines
 ## Education
@@ -31,14 +31,14 @@ SAIG will host Project Expos at the end of each quarter, and the members will wo
 
 ---
 
-<div class="permalinkPage__subtitle">Article IV</div>
+#### Article IV
 
 # Membership
 All registered students of Stanford University, regardless of background, identity, and skill level, are welcome to Stanford Artificial Intelligence Group.
 
 ---
 
-<div class="permalinkPage__subtitle">Article V</div>
+#### Article V
 
 # Leadership
 ## Section A: Titles and Responsibilities
@@ -77,14 +77,14 @@ Leadership is limited to organization members. Therefore, graduating students ca
 
 ---
 
-<div class="permalinkPage__subtitle">Article VI</div>
+#### Article VI
 
 # Dissolution of Organization
 The group may only be dissolved by a unanimous decision of the ten board members.
 
 ---
 
-<div class="permalinkPage__subtitle">Article VII</div>
+#### Article VII
 
 # Procedure to Amend Constitution
 This constitution may be amended with the unanimous decision of the ten board members.

@@ -9,55 +9,31 @@ Founded in 2017, Student AI Group (SAIG) is a student organization at Stanford U
 
 ---
 
-<div class="messages__message messages__message-combo">
-  <a 
-    href="https://www.surveymonkey.com/r/stanfordai"
-    class="messages__message-survey"
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    <h3>Join us today!</h3>
-    <p>Sign up for our mailing list!</p>
-  </a>
-  <hr/>
-  <a
-    href="https://www.facebook.com/groups/stanfordaigroup/"
-    class="messages__message-facebook"
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    <h3>Contact us on Facebook</h3>
-    <p>Our group doesn't bite.</p>
-  </a>
-</div>
-
----
-
 # Current Board
 
-**Junwon Park**<br />
-<small>President</small>
+##### President
+**Junwon Park**
 
-**Tucker Haas**<br />
-<small>Chief Financial Officer</small>
+##### Chief Financial Officer
+**Tucker Haas**
 
-**Andrew Lee**<br />
-<small>Vice President of Public Relations</small>
+##### Vice President of Public Relations
+**Andrew S. Lee**
 
-**Joseph Nicolls** <small>*&*</small> **Roma Dziembaj**<br />
-<small>Vice Presidents of Operations</small>
+##### Vice Presidents of Operations
+**Joseph Nicolls**, **Roma Dziembaj**
 
-**John Romano** <small>*&*</small> **Prasad Kawthekar**<br />
-<small>Vice Presidents of Technical Education</small>
+##### Vice Presidents of Technical Education
+**John Romano**, **Prasad Kawthekar**, **Shubhang Desai**
 
-**Andrew Lesh** <small>*&*</small> **Dylan Bedford**<br />
-<small>Vice Presidents of Ethical Education</small>
+##### Vice Presidents of Ethical Education
+**Andrew Lesh**, **Dylan Bedford**
 
-**Alex Long**<br />
-<small>Ex Officio Board Member</small>
+##### Ex Officio Board Member
+**Alex Long**
 
 ---
 
 ### Colophon
 
-Website created by [Andrew Lee](https://andrewlee.design/), open source on [GitHub](https://github.com/andrewsoohwanlee/stanfordai.group).
+Website created by [Andrew S. Lee](https://andrewlee.design/), open source on [GitHub](https://github.com/andrewsoohwanlee/stanfordai.group).
