@@ -1,8 +1,6 @@
 # Stanford AI Group (SAIG) Website 
 This repo hosts the [gatsby.js](https://www.gatsbyjs.org/)-based sourcecode for the [Stanford AI Group website (SAIG)](http://stanfordai.group/).
 
-> **Note**: *We currently host the site using Github pages in the `gh-pages` branch of the repo. This is subject to change as we move onto official Stanford hosting in the coming months.*
-
 ## Preview
 
 [![SAIG Site Preview](https://user-images.githubusercontent.com/10323195/31002798-8573ba40-a4a1-11e7-812d-33303fc42c1f.png)](http://stanfordai.group/)
@@ -16,9 +14,15 @@ This repo hosts the [gatsby.js](https://www.gatsbyjs.org/)-based sourcecode for 
 
 ## Making Changes
 
-You can run the development server with `gatsby develop` and see live changes in-browser as you edit the code.
+```bash
+# To run development server (and see lives in-browser changes)
+yarn develop
 
-Run `yarn deploy` once you're ready to publish changes, and you should be able to immediately see changes on the actual site.
+# To build the website (and run on your own server; will be in ./build/ folder)
+yarn build
+```
+
+Currently, the site is hosted on [Netlify](https://www.netlify.com/). It's set up so that any changes to `master` cause the website to rebuild.
 
 ---
 
