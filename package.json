@@ -32,8 +32,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gatsby build --prefix-paths && echo 'stanfordai.group' > ./public/CNAME && gh-pages -d public"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "@types/graphql": "^0.11.4",
@@ -42,7 +41,6 @@
     "@types/react": "^16.0.7",
     "@types/react-helmet": "^5.0.3",
     "@types/react-router-dom": "^4.0.8",
-    "gh-pages": "^1.0.0"
   },
   "repository": "https://github.com/stanfordaigroup/stanfordai.group.git"
 }
