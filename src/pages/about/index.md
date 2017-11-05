@@ -7,6 +7,8 @@ subtitle: "SAIG is community to engage with artificial intelligence, right now. 
 
 Founded in 2017, Student AI Group (SAIG) is a student organization at Stanford University. At its core, SAIG works to connect students to opportunities in the growing field of Artificial Intelligence.
 
+[Our constitution is publicly available 📜](constitution).
+
 ---
 
 # Current Board
@@ -28,9 +30,6 @@ Founded in 2017, Student AI Group (SAIG) is a student organization at Stanford U
 
 ##### Vice Presidents of Ethical Education
 **Andrew Lesh**, **Dylan Bedford**
-
-##### Ex Officio Board Member
-**Alex Long**
 
 ---
 

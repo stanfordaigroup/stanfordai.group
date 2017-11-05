@@ -121,6 +121,23 @@
   text-decoration: none;
 }
 
+.header__navbar-sub {
+  background-color: #fff;
+  border-radius: 100%;
+  color: #CF2B6E;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  height: 16px;
+  margin-left: 4px;
+  padding: 3px;
+  position: relative;
+  top: -1px;
+  text-align: center;
+  width: 16px;
+  vertical-align: middle;
+}
+
 .header__divider {
   background-color: #fff;
   border: 0;

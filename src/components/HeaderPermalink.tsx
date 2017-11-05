@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Link from 'gatsby-link';
+import HeaderNavBar from './HeaderNavBar'
 
 const Logo = require('../layouts/images/logo.svg');
 
@@ -16,26 +17,7 @@ const Header : React.StatelessComponent<Props> = props => (
       <Link className="header__logo-link" to="/">
         <img className="header__logo" src={Logo} alt="Stanford AI Group" />
       </Link>
-      <nav className="header__navbar">
-        <Link
-          to="/constitution"
-          activeClassName="header__navbar--active"
-        >
-          Constitution
-        </Link>
-        <Link
-          to="/archives"
-          activeClassName="header__navbar--active"
-        >
-          Archives
-        </Link>
-        <Link
-          to="/about"
-          activeClassName="header__navbar--active"
-        >
-          About
-        </Link>
-      </nav>
+      <HeaderNavBar />
     </div>
   </header>
 );

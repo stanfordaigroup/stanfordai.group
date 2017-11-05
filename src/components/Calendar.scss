@@ -1,16 +1,50 @@
 @import '../styles/globals';
 
-.calendar__container {
+.calendar {
+
+}
+
+.calendar__meta {
+  margin: 32px 0 64px;
+  text-align: center;
+}
+
+.calendar__meta a {
+  background-color: transparent;
+  border: solid 1px #eaeaea;
+  border-radius: 5px;
+  color: #777;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px;
+  position: relative;
+  text-decoration: none;
+}
+
+.calendar__meta span {
+  font-size: 16px;
+  left: -30px;
+  top: 6px;
+  position: absolute;
+}
+
+.calendar__meta a:hover {
+  background-color: #eaeaea;
+  border-color: #eaeaea;
+  color: #444;
+}
+
+.calendar{
   border: solid 1px #D4D4D4;
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  margin: 0 0 64px;
+  margin: 0;
   width: 100%;
 
   @include for-tablet-portrait-up {
-    margin: 32px auto 96px;
+    margin: 32px auto 0;
     max-width: 640px;
   }
 }
