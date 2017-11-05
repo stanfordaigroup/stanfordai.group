@@ -67,6 +67,7 @@
 
 .calendar__event {
   align-items: center;
+  border-bottom: solid 1px #efefef;
   color: #363636;
   display: flex;
   flex-direction: row;
@@ -74,6 +75,10 @@
   text-decoration: none;
 
   transition: opacity 100ms ease;
+}
+
+.calendar__event:last-of-type {
+  border: 0;
 }
 
 .calendar__event:hover {

@@ -19,8 +19,22 @@ type CalendarData = Array<Event>;
 
 const calendarData: CalendarData = require('../calendar.json').data;
 
-const Header: React.StatelessComponent = () => {
-  
+function formatAMPM(date: Date) {
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  const ampm = hours >= 12 ? "pm" : "am";
+
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+
+  var strTime = hours + ":" + minutes + " " + ampm;
+
+  return strTime;
+}
+
+const Calendar: React.StatelessComponent = () => {
   return (
     <div className="calendar__container">
       <div className="calendar">
@@ -32,6 +46,7 @@ const Header: React.StatelessComponent = () => {
             const startDate = new Date(event.start.dateTime);
             const month = startDate.toLocaleString('en-us', { month: "short" });
             const day = startDate.toLocaleString('en-us', { day: "numeric" });
+            const time = formatAMPM(startDate);
 
             // Default calendar type to social
             let type = 'social';
@@ -52,10 +67,10 @@ const Header: React.StatelessComponent = () => {
                 </div>
                 <div className="calendar__event-content">
                   <h1 className="calendar__event-title">{event.summary}</h1>
-                  <h2 className="calendar__event-meta">7pm  ·  {event.location}</h2>
+                  <h2 className="calendar__event-meta">{time}  ·  {event.location}</h2>
                   <p className="calendar__event-description">{event.description}</p>
                 </div>
-                <div className="calendar__event-icon"></div>
+                <div className="calendar__event-icon" />
               </div>
             );
           })}
@@ -72,6 +87,6 @@ const Header: React.StatelessComponent = () => {
       </div>
     </div>
   )
-}
+};
 
-export default Header
+export default Calendar;

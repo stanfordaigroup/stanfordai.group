@@ -1,0 +1,214 @@
+@import '../styles/globals';
+
+.archives{
+  border: solid 1px #D4D4D4;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 100%;
+
+  @include for-tablet-portrait-up {
+    margin: 32px auto 64px;
+    max-width: 640px;
+  }
+}
+
+.archives__header {
+  background-color: #F9F9F9;
+  border-bottom: solid 1px #D4D4D4;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 48px;
+  padding: 16px 24px;
+  width: 100%;
+}
+
+.archives__count {
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+.archives__item {
+  align-items: center;
+  border-bottom: solid 1px #d4d4d4;
+  color: #363636;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-decoration: none;
+}
+
+.archives__item:last-of-type {
+  border: 0;
+}
+
+.archives__item-dashes {
+  // Basic (uncategorized) color is grey
+  background: url('../layouts/images/dash-pattern-dark.svg') transparent;
+  background-size: 85px 4px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 8px;
+}
+
+.archives__item--speakers .archives__item-dashes {
+  background-image: url('../layouts/images/dash-pattern-speakers-yellow.svg');
+}
+
+.archives__item--workshops .archives__item-dashes {
+  background-image: url('../layouts/images/dash-pattern-workshops-purple.svg');
+}
+
+.archives__item--social .archives__item-dashes {
+  background-image: url('../layouts/images/dash-pattern-social-red.svg');
+}
+
+.archives__item-icon {
+  background-color: #dadada;
+  border-radius: 100%;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  height: 32px;
+  position: absolute;
+  left: -12px;
+  bottom: -16px;
+  width: 32px;
+
+  @include for-tablet-portrait-up {
+    display: block;
+  }
+}
+
+.archives__item--speakers .archives__item-icon {
+  background: url('../layouts/images/icon-mic.svg') center no-repeat;
+  background-color: #F8E71C;
+  background-size: 12px;
+}
+
+.archives__item--workshops .archives__item-icon {
+  background: url('../layouts/images/icon-package.svg') center no-repeat;
+  background-color: #7D30C0;
+  background-size: 12px;
+}
+
+.archives__item--social .archives__item-icon {
+  background: url('../layouts/images/icon-users.svg') center no-repeat;
+  background-color: #D0021B;
+  background-size: 12px;
+}
+
+.archives__item-header {
+  align-items: center;
+  background-color: #fafafa;
+  border-bottom: dashed 1px #eaeaea;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+}
+
+.archives__item-header-date {
+  align-items: center;
+  border-right: solid 1px #E8E8E8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 54px;
+  padding: 0 24px 0 32px;
+  width: 88px;
+}
+
+.archives__item-header-month {
+  opacity: 0.5;
+  font-size: 12px;
+}
+
+.archives__item-header-day {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.archives__item-header-content {
+  margin: 24px 0;
+  padding: 0 32px;
+}
+
+.archives__item-header-title {
+  font-size: 15px;
+  margin: 0;
+}
+
+.archives__item-header-meta {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 2px 0 0;
+  opacity: 0.7;
+}
+
+.archives__item-header-description {
+  font-size: 13px;
+  opacity: 0.7;
+  margin: 16px 0 0;
+}
+
+.archives__item-content {
+  width: 100%;
+  padding: 18px 32px 24px;
+}
+
+.archives__item-content h3 {
+  font-size: 16px;
+  margin: 12px 0;
+}
+
+.archives__item-content p {
+  font-size: 14px;
+  margin: 12px 0 0;
+  line-height: 20px;
+}
+
+.archives__item-content hr {
+  background-color: #eaeaea;
+  border: 0;
+  height: 2px;
+  margin: 36px 0 24px;
+  width: 100px;
+}
+
+.archives__item-content > ol {
+  font-size: 14px;
+  margin-bottom: 24px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.archives__item-content > ol li a {
+  color: #E33535;
+  font-weight: bold;
+}
+
+.archives__item-content > ol li {
+  counter-increment: step-counter;
+  display: flex;  
+  margin: 12px 12px;
+}
+
+.archives__item-content > ol li::before {
+  content: counter(step-counter);
+  display: flex;
+  margin-right: 12px;
+  font-size: 8px;
+  background-color: #E33535;
+  color: white;
+  font-weight: bold;
+  padding: 5px 4px 4px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
