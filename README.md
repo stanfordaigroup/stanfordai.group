@@ -14,7 +14,15 @@ This repo hosts the [gatsby.js](https://www.gatsbyjs.org/)-based sourcecode for 
 
 ## Making Changes
 
+Be sure to have [yarn](https://yarnpkg.com/en/) installed.
+
 ```bash
+# Clone git repo
+git clone https://github.com/stanfordaigroup/stanfordai.group.git
+
+# Setup packages
+yarn
+
 # To run development server (and see lives in-browser changes)
 yarn develop
 
