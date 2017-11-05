@@ -41,7 +41,7 @@ const Archives: React.StatelessComponent = () => {
               <div className="archives__item-header-day">26</div>
             </div>
             <div className="archives__item-header-content">
-              <h1 className="archives__item-header-title">Animesh Garg on Robotic Vision</h1>
+              <h1 className="archives__item-header-title">(Speaker) Animesh Garg on Robotic Vision</h1>
               <p className="archives__item-header-description">
                 <strong>Animesh Garg</strong>, a postdoctoral researcher at Stanford, will be joining us at SAIG with a talk centered on <strong>robotic vision and learning</strong>. Animesh comes to us with an MS in Computer Science and a Ph.D. in Operations Research from U.C. Berkeley. Today, he works at the <a href="http://ai.stanford.edu/">Stanford AI Lab</a> with a focus on robotics and computer vision.
 
@@ -66,7 +66,7 @@ const Archives: React.StatelessComponent = () => {
               <div className="archives__item-header-day">19</div>
             </div>
             <div className="archives__item-header-content">
-              <h1 className="archives__item-header-title">Basic Neural Networks</h1>
+              <h1 className="archives__item-header-title">(Tech Workshop) Basic Neural Networks</h1>
               <p className="archives__item-header-description">Shubhang Desai, a member of our team, will be teaching basic usage of Neural Networks with Python. If you’ve never worked with AI or machine learning before, or want a refresher, this workshop is for you!</p>
             </div>
           </div>
@@ -97,7 +97,7 @@ const Archives: React.StatelessComponent = () => {
               <div className="archives__item-header-day">12</div>
             </div>
             <div className="archives__item-header-content">
-              <h1 className="archives__item-header-title">First Meeting</h1>
+              <h1 className="archives__item-header-title">(Social) First Meeting</h1>
               <p className="archives__item-header-description">Our first meeting as a public student organization. Started with introductions of the team and org, and ended with a viewing of the <em>Twilight Zone</em>.</p>
             </div>
           </div>
