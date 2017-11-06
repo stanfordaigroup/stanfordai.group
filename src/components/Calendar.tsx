@@ -17,7 +17,11 @@ type Event = {
 
 type CalendarData = Array<Event>;
 
-const calendarData: CalendarData = require('../calendar.json').data;
+let calendarData: CalendarData = require('../calendar.json').data;
+
+calendarData = calendarData.sort((a, b): number => {
+  return new Date(a.start.dateTime).getTime() - new Date(b.start.dateTime).getTime();
+});
 
 function formatAMPM(date: Date) {
   let hours = date.getHours();
