@@ -12,13 +12,15 @@ const IndexPage = () => {
   const randomNum = Math.floor(Math.random() * (people.length));
   const person = people[randomNum];
 
+  const avatarClass = 'messages__avatar--' + person.id;
+
   return (
     <div className="page">
       <div className="messages__container">
         <div className="messages__avatar-title">
           {person.name}  ·  {person.role}
         </div>
-        <div className={`messages__avatar messages__avatar--${person.id}`} />
+        <div className={['messages__avatar', avatarClass].join(' ')} />
         <div className="messages__message messages__message-1">
           <p><strong>SAIG</strong> is a student group which wants to be a part of shaping the future of artificial intelligence. We care about the tech <span className="italics">and</span> the ethics involved.</p>
         </div>
