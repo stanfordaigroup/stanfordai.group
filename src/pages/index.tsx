@@ -2,19 +2,23 @@ import * as React from 'react';
 import Link from 'gatsby-link';
 import Header from '../components/Header';
 import Calendar from '../components/Calendar';
+import people from '../people';
 
 import './index.scss'
 
 const Logo = require('../layouts/images/logo.svg');
 
 const IndexPage = () => {
+  const randomNum = Math.floor(Math.random() * (people.length));
+  const person = people[randomNum];
+
   return (
     <div className="page">
       <div className="messages__container">
         <div className="messages__avatar-title">
-          Junwon Park  ·  President of SAIG
+          {person.name}  ·  {person.role}
         </div>
-        <div className="messages__avatar" />
+        <div className={`messages__avatar messages__avatar--${person.id}`} />
         <div className="messages__message messages__message-1">
           <p><strong>SAIG</strong> is a student group which wants to be a part of shaping the future of artificial intelligence. We care about the tech <span className="italics">and</span> the ethics involved.</p>
         </div>
@@ -25,8 +29,8 @@ const IndexPage = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <h3>Join us today!</h3>
-            <p>Sign up for our mailing list!</p>
+            <h3>Join our mailing list</h3>
+            <p>Follow our events and more!</p>
           </a>
           <hr/>
           <a
@@ -35,8 +39,8 @@ const IndexPage = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <h3>Contact us on Facebook</h3>
-            <p>Our group doesn't bite.</p>
+            <h3>Join us on Facebook</h3>
+            <p>Our group doesn't bite. 🙋</p>
           </a>
         </div>
       </div>

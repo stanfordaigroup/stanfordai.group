@@ -41,7 +41,7 @@
 }
 
 .messages__avatar {
-  background: url('../layouts/images/avatar-junwon.png') no-repeat;
+  background-repeat: no-repeat;
   border-radius: 100%;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
   height: 30px;
@@ -51,8 +51,87 @@
   width: 30px;
 
   @include resolution(2) {
-    background: url('../layouts/images/avatar-junwon@2x.png') no-repeat;
     background-size: 30px 30px;
+  }
+}
+
+.messages__avatar--junwon {
+  background-image: url('../layouts/images/avatar-junwon.png');
+
+  @include resolution(2) {
+    background-image: url('../layouts/images/avatar-junwon@2x.png');
+  }
+}
+
+.messages__avatar--asl {
+  background-image: url('../layouts/images/avatar-andrew.png');
+
+  @include resolution(2) {
+    background-image: url('../layouts/images/avatar-andrew@2x.png');
+  }
+}
+
+.messages__avatar--tucker {
+  background-image: url('../layouts/images/avatar-tucker.png');
+
+  @include resolution(2) {
+    background-image: url('../layouts/images/avatar-tucker@2x.png');
+  }
+}
+
+.messages__avatar--joseph {
+  background-image: url('../layouts/images/avatar-joseph.png');
+
+  @include resolution(2) {
+    background-image: url('../layouts/images/avatar-joseph@2x.png');
+  }
+}
+
+.messages__avatar--roma {
+  background-image: url('../layouts/images/avatar-roma.png');
+
+  @include resolution(2) {
+    background-image: url('../layouts/images/avatar-roma@2x.png');
+  }
+}
+
+.messages__avatar--john {
+  background-image: url('../layouts/images/avatar-john.png');
+
+  @include resolution(2) {
+    background-image: url('../layouts/images/avatar-john@2x.png');
+  }
+}
+
+.messages__avatar--prasad {
+  background-image: url('../layouts/images/avatar-prasad.png');
+
+  @include resolution(2) {
+    background-image: url('../layouts/images/avatar-prasad@2x.png');
+  }
+}
+
+.messages__avatar--shubhang {
+  background-image: url('../layouts/images/avatar-shubhang.png');
+
+  @include resolution(2) {
+    background-image: url('../layouts/images/avatar-shubhang@2x.png');
+  }
+}
+
+.messages__avatar--andrewlesh {
+  background-image: url('../layouts/images/avatar-andrewlesh.png');
+
+  @include resolution(2) {
+    background-image: url('../layouts/images/avatar-andrewlesh@2x.png');
+  }
+}
+
+.messages__avatar--dylan {
+  background-image: url('../layouts/images/avatar-dylan.png');
+
+  @include resolution(2) {
+    background-image: url('../layouts/images/avatar-dylan@2x.png');
   }
 }
 
