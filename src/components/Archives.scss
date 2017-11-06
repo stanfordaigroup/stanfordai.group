@@ -33,7 +33,8 @@
 
 .archives__item {
   align-items: center;
-  border-bottom: solid 1px #d4d4d4;
+  border-bottom: solid 1px #dfdfdf;
+  box-shadow: 0 -2px 4px -3px rgba(0, 0, 0, 0.2);
   color: #363636;
   display: flex;
   flex-direction: column;
@@ -69,7 +70,7 @@
 }
 
 .archives__item-icon {
-  background-color: #dadada;
+  background-color: #dfdfdf;
   border-radius: 100%;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
   display: none;
@@ -104,8 +105,8 @@
 
 .archives__item-header {
   align-items: center;
-  background-color: #fafafa;
-  border-bottom: dashed 1px #eaeaea;
+  background-color: #fff;
+  border-bottom: dashed 1px #dfdfdf;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -158,6 +159,7 @@
 }
 
 .archives__item-content {
+  background-color: #fafafa;
   width: 100%;
   padding: 18px 32px 24px;
 }
