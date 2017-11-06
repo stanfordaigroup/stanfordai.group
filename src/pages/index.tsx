@@ -10,7 +10,7 @@ const Logo = require('../layouts/images/logo.svg');
 
 const IndexPage = () => {
   const randomNum = Math.floor(Math.random() * (people.length));
-  const person = people[randomNum];
+  const person = people[0];
 
   const avatarClass = 'messages__avatar--' + person.id;
   const avatarJSX = <div className={['messages__avatar', avatarClass].join(' ')} />;
