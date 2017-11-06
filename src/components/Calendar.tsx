@@ -1,8 +1,9 @@
-import * as React from 'react'
+import * as React from 'react';
+import CalendarEvent from './CalendarEvent';
 
-import './Calendar.scss'
+import './Calendar.scss';
 
-type Event = {
+export type Event = {
   end: {
     dateTime: string,
   },
@@ -13,7 +14,7 @@ type Event = {
   summary: string,
   updated: string,
   description?: string,
-}
+};
 
 type CalendarData = Array<Event>;
 
@@ -62,20 +63,25 @@ const Calendar: React.StatelessComponent = () => {
               type = 'speakers';
             }
 
+            // Check if there's a link included
+            const urlRegex = /(https?:\/\/[^\s]+)/g
+
+            const url = urlRegex.exec(event.description);
+
+            const parsedDescription = event.description.replace(urlRegex, '');
+
             return (
-              <div key={event.start.dateTime} className={'calendar__event calendar__event--' + type}>
-                <div className="calendar__event-dashes" />
-                <div className="calendar__event-date">
-                  <div className="calendar__event-month">{month}</div>
-                  <div className="calendar__event-day">{day}</div>
-                </div>
-                <div className="calendar__event-content">
-                  <h1 className="calendar__event-title">{event.summary}</h1>
-                  <h2 className="calendar__event-meta">{time}  ·  {event.location}</h2>
-                  <p className="calendar__event-description">{event.description}</p>
-                </div>
-                <div className="calendar__event-icon" />
-              </div>
+              <CalendarEvent
+                key={event.summary}
+                month={month}
+                day={day}
+                time={time}
+                type={type}
+                url={url && url[0]}
+                title={event.summary}
+                location={event.location}
+                description={parsedDescription}
+              />
             );
           })}
         </div>

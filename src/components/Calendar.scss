@@ -77,11 +77,11 @@
   transition: opacity 100ms ease;
 }
 
-.calendar__event:last-of-type {
-  border: 0;
+.calendar__event-link {
+  border-bottom: solid 1px #efefef;
 }
 
-.calendar__event:hover {
+.calendar__event-link:hover {
   background: #fafafa;
   opacity: 0.7;
 }
