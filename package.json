@@ -4,6 +4,7 @@
   "version": "0.1",
   "author": "Andrew Lee <hi@andrewlee.design>",
   "dependencies": {
+    "formik": "^0.10.3",
     "gatsby": "^1.9.74",
     "gatsby-cli": "^1.1.11",
     "gatsby-link": "^1.6.15",

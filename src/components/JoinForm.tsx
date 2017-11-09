@@ -1,10 +1,8 @@
 import * as React from 'react';
 import Link from 'gatsby-link';
+import {Formik, Form, Field} from 'formik';
 
-type State = {
-  name: string,
-  email: string,
-};
+import './JoinForm.scss';
 
 function encode(data: any) {
   return Object.keys(data)
@@ -12,95 +10,86 @@ function encode(data: any) {
       .join("&");
 }
 
-class JoinForm extends React.Component<null, State> {
-  state = {
-    name: '',
-    email: '',
-  }
-
-  handleChange = (e) => {
-    this.setState({[e.target.name]: e.target.value});
-  }
-
-  handleSubmit = e => {
-    // fetch("/", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //   body: encode({ "form-name": "contact", ...this.state })
-    // })
-    //   .then(() => alert("Success!"))
-    //   .catch(error => alert(error));
-
-    const request = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: encode(Object.assign({
-        'form-name': 'join',
-      }, this.state))
-    };
-
-    fetch('/', request)
-      .then(() => alert('Success!'))
-      .catch(error => alert(error));
-
-    console.log(request);
-
-    e.preventDefault();
-  };
-
+class JoinForm extends React.Component{
   render () {
     return (
       <div className="page">
         <div className="join__container">
-          <form
-            name="join"
-            method="post"
-            action="/thanks/"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            onSubmit={this.handleSubmit}
-            >
-            <p hidden>
-              <label>
-                Don’t fill this out: <input name="bot-field" />
-              </label>
-            </p>
+        <Formik
+          initialValues={{
+            fullname: '',
+            email: '',
+          }}
+          validate={values => {
+            // same as above, but feel free to move this into a class method now.
+            let errors = {};
+            if (!values.email) {
+              errors.email = 'Required';
+            } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+              errors.email = 'Invalid email address';
+            }
+            return errors;
+          }}
+          onSubmit={(values, { setSubmitting,  setErrors, /* setValues and other goodies */ }) => {
 
-            <div className="join__name">
-              <label htmlFor="name">
-                <h3>What's your name?</h3>
-                <p>e.g., Machiney McLearnFace</p>
-              </label>
-              <input type="text" name="name" placeholder="Machiney McLearnFace" onChange={this.handleChange} required />
-            </div>
-    
-            <div className="join__email">
-              <label htmlFor="name">
-                <h3>What's your email?</h3>
-                <p>We'll invite you (optionally) to our email list for news!</p>
-              </label>
-              <input type="email" id="mail" name="email" placeholder="yourname@stanford.edu" onChange={this.handleChange} required />
-            </div>
-    
-            <div className="join__classyear">
-              <h3>Class Year</h3>
-              <label htmlFor="freshman">Freshman</label>
-              <input type="radio" name="class-year" id="freshman" value="Freshman" />
-              <label htmlFor="sophomore">Sophomore</label>
-              <input type="radio" name="class-year" id="sophomore" value="Sophomore" />
-              <label htmlFor="junior">Junior</label>
-              <input type="radio" name="class-year" id="junior" value="Junior" />
-              <label htmlFor="senior">Senior</label>
-              <input type="radio" name="class-year" id="senior" value="Senior" />
-              <label htmlFor="other">Other</label>
-              <input type="text" name="class-year" id="other"/>
-            </div>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-          </form>
+            // Create request to subscribe to mailman
+            // Mimicking: https://mailman.stanford.
+            
+
+            // POST /mailman/subscribe/saig-announce HTTP/1.1
+            // Host: mailman.stanford.edu
+            // Connection: keep-alive
+            // Content-Length: 83
+            // Cache-Control: max-age=0
+            // Origin: https://mailman.stanford.edu
+            // Upgrade-Insecure-Requests: 1
+            // Content-Type: application/x-www-form-urlencoded
+            // User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36
+            // Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+            // Referer: https://mailman.stanford.edu/mailman/listinfo/saig-announce
+            // Accept-Encoding: gzip, deflate, br
+            // Accept-Language: en-US,en;q=0.8
+
+            const request = {
+              method: 'POST',
+              headers: {
+                // 'Host': 'mailman.stanford.edu',
+                // 'Connection': 'keep-alive',
+                // 'Origin': 'https://mailman.stanford.edu',
+                // 'Upgrade-Insecure-Requests': 1,
+                'Content-Type': 'application/x-www-form-urlencoded',
+                // 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+              },
+              body: encode(Object.assign({
+                'digest': 0,
+                'email-button': 'Subscribe',
+              }, values))
+            };
+
+            fetch('https://mailman.stanford.edu/mailman/listinfo/saig-announce', request)
+              .then(() => console.log('success'))
+              .catch(error => console.error(error));
+
+            console.log(request);
+          }}
+          render={({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) =>
+            <Form>
+              <div className="form__block">
+                <label htmlFor="fullname">
+                  <h3>Name <small>* Required</small></h3>
+                </label>
+                <Field id="fullname" type="text" name="fullname" placeholder="e.g., Machiney McLearnFace" />
+              </div>
+              <div className="form__block">
+                <label htmlFor="email">
+                  <h3>Email <small>* Required</small></h3>
+                  <p>We'll invite you to our email list for news!</p>
+                </label>
+                <Field id="email" type="email" name="email" placeholder="e.g., firstlast@stanford.edu" />
+              </div>
+              <button className="form__submit" type="submit" disabled={isSubmitting}>Submit</button>
+            </Form>}
+          />
         </div>
       </div>
     );
