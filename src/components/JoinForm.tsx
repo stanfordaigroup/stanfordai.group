@@ -15,80 +15,65 @@ class JoinForm extends React.Component{
     return (
       <div className="page">
         <div className="join__container">
-        <Formik
-          initialValues={{
-            fullname: '',
-            email: '',
-          }}
-          validate={values => {
-            // same as above, but feel free to move this into a class method now.
-            let errors = {};
-            if (!values.email) {
-              errors.email = 'Required';
-            } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-              errors.email = 'Invalid email address';
-            }
-            return errors;
-          }}
-          onSubmit={(values, { setSubmitting,  setErrors, /* setValues and other goodies */ }) => {
+          <Formik
+            initialValues={{
+              fullname: '',
+              email: '',
+            }}
+            onSubmit={(values, { setSubmitting,  setErrors, setStatus /* setValues and other goodies */ }) => {
+              // Create request to subscribe to mailman
+              // Mimicking: https://mailman.stanford.
 
-            // Create request to subscribe to mailman
-            // Mimicking: https://mailman.stanford.
-            
+              const payload = JSON.stringify({
+                'fullname': values.fullname,
+                'email': values.email,
+              });
 
-            // POST /mailman/subscribe/saig-announce HTTP/1.1
-            // Host: mailman.stanford.edu
-            // Connection: keep-alive
-            // Content-Length: 83
-            // Cache-Control: max-age=0
-            // Origin: https://mailman.stanford.edu
-            // Upgrade-Insecure-Requests: 1
-            // Content-Type: application/x-www-form-urlencoded
-            // User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36
-            // Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
-            // Referer: https://mailman.stanford.edu/mailman/listinfo/saig-announce
-            // Accept-Encoding: gzip, deflate, br
-            // Accept-Language: en-US,en;q=0.8
+              const request: any = {
+                method: 'POST',
+                headers: {
+                  'Origin': 'https://mailman.stanford.edu',
+                  contentType: 'application/json',                
+                },
+                body: payload,
+              };
 
-            const request = {
-              method: 'POST',
-              headers: {
-                // 'Host': 'mailman.stanford.edu',
-                // 'Connection': 'keep-alive',
-                // 'Origin': 'https://mailman.stanford.edu',
-                // 'Upgrade-Insecure-Requests': 1,
-                'Content-Type': 'application/x-www-form-urlencoded',
-                // 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-              },
-              body: encode(Object.assign({
-                'digest': 0,
-                'email-button': 'Subscribe',
-              }, values))
-            };
-
-            fetch('https://mailman.stanford.edu/mailman/listinfo/saig-announce', request)
-              .then(() => console.log('success'))
-              .catch(error => console.error(error));
-
-            console.log(request);
-          }}
-          render={({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) =>
-            <Form>
-              <div className="form__block">
-                <label htmlFor="fullname">
-                  <h3>Name <small>* Required</small></h3>
-                </label>
-                <Field id="fullname" type="text" name="fullname" placeholder="e.g., Machiney McLearnFace" />
-              </div>
-              <div className="form__block">
-                <label htmlFor="email">
-                  <h3>Email <small>* Required</small></h3>
-                  <p>We'll invite you to our email list for news!</p>
-                </label>
-                <Field id="email" type="email" name="email" placeholder="e.g., firstlast@stanford.edu" />
-              </div>
-              <button className="form__submit" type="submit" disabled={isSubmitting}>Submit</button>
-            </Form>}
+              fetch('https://saig-email-subscriber.herokuapp.com/subscribe', request)
+                .then((res: any) => {
+                  setSubmitting(false);
+                  setStatus('submitted');
+                })
+                .catch((error: any) => {});
+            }}
+            render={({ status, values, errors, isSubmitting }) => {
+              if (status === 'submitted') {
+                return (
+                  <div className="form__submitted">
+                    <h1>Thanks for joining SAIG, {values.fullname}!</h1>
+                    <p>Expect an email confirmation shortly asking you to join our mailing list. 😉</p>
+                  </div>
+                );
+              } else {
+                return (
+                  <Form>
+                    <div className="form__block">
+                      <label htmlFor="fullname">
+                        <h3>Name <small>* Required</small></h3>
+                      </label>
+                      <Field id="fullname" type="text" name="fullname" required placeholder="e.g., Machiney McLearnFace" />
+                    </div>
+                    <div className="form__block">
+                      <label htmlFor="email">
+                        <h3>Email <small>* Required</small></h3>
+                        <p>We'll invite you to our email list for news!</p>
+                      </label>
+                      <Field id="email" type="email" name="email" required placeholder="e.g., firstlast@stanford.edu" />
+                    </div>
+                    <button className="form__submit" type="submit" disabled={isSubmitting}>Submit</button>
+                  </Form>
+                );
+              }
+            }}
           />
         </div>
       </div>
