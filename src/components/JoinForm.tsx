@@ -19,6 +19,7 @@ class JoinForm extends React.Component{
             initialValues={{
               fullname: '',
               email: '',
+              year: '',
             }}
             onSubmit={(values, { setSubmitting,  setErrors, setStatus /* setValues and other goodies */ }) => {
               // Create request to subscribe to mailman
@@ -45,9 +46,12 @@ class JoinForm extends React.Component{
               const netlifyRequest: any = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: encode(Object.assign({
+                body: encode({
                   'form-name': 'join',
-                }, values)),
+                  'fullname': values.fullname,
+                  'email': values.email,
+                  'year': values.year,
+                }),
               };
 
               const netlifyLogging = fetch("/", netlifyRequest)
@@ -61,7 +65,7 @@ class JoinForm extends React.Component{
                   setStatus('submitted');
                 });
             }}
-            render={({ status, values, errors, isSubmitting }) => {
+            render={({ status, values, errors, isSubmitting, handleBlur, handleChange }) => {
               if (status === 'submitted') {
                 return (
                   <div className="form__submitted">
@@ -72,6 +76,7 @@ class JoinForm extends React.Component{
               } else {
                 return (
                   <Form
+                    className="form"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
                   >
@@ -93,7 +98,31 @@ class JoinForm extends React.Component{
                       </label>
                       <Field id="email" type="email" name="email" required placeholder="e.g., firstlast@stanford.edu" />
                     </div>
+                    <div className="form__block">
+                      <label htmlFor="year">
+                        <h3>Class Year <small>* Required</small></h3>
+                      </label>
+                      <select
+                        id="year"
+                        className="form__year"
+                        name="year"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.year}
+                        required
+                      >
+                        <option disabled value=""> -- select an option -- </option>
+                        <option value="freshman">Freshman</option>
+                        <option value="sophomore">Sophomore</option>
+                        <option value="junior">Junior</option>
+                        <option value="senior">Senior</option>
+                        <option value="other">Other (Grad, PhD, etc.)</option>
+                      </select>
+                    </div>
                     <button className="form__submit" type="submit" disabled={isSubmitting}>Submit</button>
+                    <p className="form_subtext">
+                      <small>By submitting this form, you'll automatically be added to our mailing list.</small>
+                    </p>
                   </Form>
                 );
               }

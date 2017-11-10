@@ -23,6 +23,13 @@ const HeaderNavBar : React.StatelessComponent = () => (
     >
       About
     </Link>
+    <Link
+      to="/join"
+      className="header__navbar--join"
+      activeClassName="header__navbar--active"
+    >
+      Join SAIG
+    </Link>
   </nav>
 );
 

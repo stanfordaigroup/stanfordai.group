@@ -26,15 +26,13 @@ const IndexPage = () => {
           <p><strong>SAIG</strong> is a student group which wants to be a part of shaping the future of artificial intelligence. We care about the tech <span className="italics">and</span> the ethics involved.</p>
         </div>
         <div className="messages__message messages__message-combo messages__message-2">
-          <a 
-            href="https://www.surveymonkey.com/r/stanfordai"
+          <Link
+            to="join"
             className="messages__message-survey"
-            rel="noopener noreferrer"
-            target="_blank"
           >
             <h3>Join our mailing list</h3>
             <p>Follow our events and more!</p>
-          </a>
+          </Link>
           <hr/>
           <a
             href="https://www.facebook.com/groups/stanfordaigroup/"

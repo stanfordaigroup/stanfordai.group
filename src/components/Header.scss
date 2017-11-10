@@ -79,6 +79,7 @@
   margin: 24px;
 
   @include for-tablet-portrait-up {
+    align-items: center;
     flex-direction: row;
     justify-content: flex-end;
     margin-right: 64px;
@@ -119,6 +120,22 @@
 .header__navbar .header__navbar--active:hover {
   opacity: 1;
   text-decoration: none;
+}
+
+.header__navbar--join {
+  display: none;
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  padding: 8px 12px;
+
+  @include for-tablet-landscape-up {
+    display: block;
+  }
+}
+
+.header__navbar--join.header__navbar--active {
+  background-color: #fff;
+  color: #CF2B6E;
 }
 
 .header__navbar-sub {

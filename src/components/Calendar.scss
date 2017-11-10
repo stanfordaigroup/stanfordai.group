@@ -10,15 +10,25 @@
 }
 
 .calendar__meta a {
-  background-color: transparent;
-  border: solid 1px #eaeaea;
-  border-radius: 5px;
-  color: #777;
-  font-size: 12px;
+  background-color: #E33535;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
   font-weight: bold;
-  padding: 8px;
-  position: relative;
+  margin: 48px auto 48px;
+  padding: 12px 16px 10px;
   text-decoration: none;
+  width: 200px;
+
+  transition: opacity 100ms ease;
+}
+
+.calendar__meta a:hover {
+  opacity: 0.7;
 }
 
 .calendar__meta span {
@@ -26,12 +36,6 @@
   left: -30px;
   top: 6px;
   position: absolute;
-}
-
-.calendar__meta a:hover {
-  background-color: #eaeaea;
-  border-color: #eaeaea;
-  color: #444;
 }
 
 .calendar{
