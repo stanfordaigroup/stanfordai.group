@@ -24,26 +24,42 @@ class JoinForm extends React.Component{
               // Create request to subscribe to mailman
               // Mimicking: https://mailman.stanford.
 
-              const payload = JSON.stringify({
+              const mailPayload = JSON.stringify({
                 'fullname': values.fullname,
                 'email': values.email,
               });
 
-              const request: any = {
+              const mailRequest: any = {
                 method: 'POST',
                 headers: {
                   'Origin': 'https://mailman.stanford.edu',
                   contentType: 'application/json',                
                 },
-                body: payload,
+                body: mailPayload,
               };
 
-              fetch('https://saig-email-subscriber.herokuapp.com/subscribe', request)
-                .then((res: any) => {
+              const mailSubscription = fetch('https://saig-email-subscriber.herokuapp.com/subscribe', mailRequest)
+                .then((res: any) => {})
+                .catch(error => console.error(error));
+
+              const netlifyRequest: any = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: encode(Object.assign({
+                  'form-name': 'join',
+                }, values)),
+              };
+
+              const netlifyLogging = fetch("/", netlifyRequest)
+                .then(() => {})
+                .catch(error => console.error(error));
+
+              Promise
+                .all([mailSubscription, netlifyLogging])
+                .then(() => {
                   setSubmitting(false);
                   setStatus('submitted');
-                })
-                .catch((error: any) => {});
+                });
             }}
             render={({ status, values, errors, isSubmitting }) => {
               if (status === 'submitted') {
@@ -55,7 +71,15 @@ class JoinForm extends React.Component{
                 );
               } else {
                 return (
-                  <Form>
+                  <Form
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                  >
+                    <p hidden>
+                      <label>
+                        Don’t fill this out: <input name="bot-field" />
+                      </label>
+                    </p>
                     <div className="form__block">
                       <label htmlFor="fullname">
                         <h3>Name <small>* Required</small></h3>
