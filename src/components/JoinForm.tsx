@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Link from 'gatsby-link';
-import {Formik, Form, Field} from 'formik';
+import {Formik, Field} from 'formik';
 
 import './JoinForm.scss';
 
@@ -21,7 +21,7 @@ class JoinForm extends React.Component{
               email: '',
               year: '',
             }}
-            onSubmit={(values, { setSubmitting,  setErrors, setStatus /* setValues and other goodies */ }) => {
+            onSubmit={(values, { setSubmitting,  setErrors, setStatus }) => {
               // Create request to subscribe to mailman
               // Mimicking: https://mailman.stanford.
 
@@ -62,7 +62,7 @@ class JoinForm extends React.Component{
                   setStatus('submitted');
                 });
             }}
-            render={({ status, values, errors, isSubmitting, handleBlur, handleChange }) => {
+            render={({ status, values, errors, isSubmitting, handleBlur, handleChange, handleSubmit }) => {
               if (status === 'submitted') {
                 return (
                   <div className="form__submitted">
@@ -72,10 +72,11 @@ class JoinForm extends React.Component{
                 );
               } else {
                 return (
-                  <Form
+                  <form
                     className="form"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
+                    onSubmit={handleSubmit}
                   >
                     <p hidden>
                       <label>
@@ -120,7 +121,7 @@ class JoinForm extends React.Component{
                     <p className="form_subtext">
                       <small>By submitting this form, you'll automatically be added to our mailing list.</small>
                     </p>
-                  </Form>
+                  </form>
                 );
               }
             }}
