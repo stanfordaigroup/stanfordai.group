@@ -46,12 +46,9 @@ class JoinForm extends React.Component{
               const netlifyRequest: any = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: encode({
+                body: encode(Object.assign({
                   'form-name': 'join',
-                  'fullname': values.fullname,
-                  'email': values.email,
-                  'year': values.year,
-                }),
+                }, values)),
               };
 
               const netlifyLogging = fetch("/", netlifyRequest)
