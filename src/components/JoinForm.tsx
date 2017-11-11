@@ -57,7 +57,10 @@ class JoinForm extends React.Component<null, State>{
             name="join-saig"
             action="/welcome"
             onSubmit={this.handleSubmit}
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
           >
+            <input type="hidden" name="form-name" value="join-saig" />
             <div className="form__block">
               <label htmlFor="fullname">
                 <h3>Name <small>* Required</small></h3>
