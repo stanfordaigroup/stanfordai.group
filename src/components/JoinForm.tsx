@@ -36,7 +36,7 @@ class JoinForm extends React.Component<null, State>{
       },
       body: encode(
         Object.assign({
-          'form-name': 'join',
+          'form-name': 'join-saig',
         }, this.state),
       ),
     };
@@ -54,7 +54,7 @@ class JoinForm extends React.Component<null, State>{
         <div className="join__container">
           <form
             className="form"
-            name="join"
+            name="join-saig"
             action="/welcome"
             onSubmit={this.handleSubmit}
           >
