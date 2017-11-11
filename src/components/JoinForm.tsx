@@ -3,12 +3,6 @@ import Link, {navigateTo} from 'gatsby-link';
 
 import './JoinForm.scss';
 
-function encode(data: any) {
-  return Object.keys(data)
-      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&');
-}
-
 type State = {
   fullname: string,
   email: string,
@@ -16,6 +10,7 @@ type State = {
 
   formSubmitted: boolean,
   formError: boolean,
+  formLoading: boolean,
 };
 
 class JoinForm extends React.Component<null, State>{
@@ -26,28 +21,58 @@ class JoinForm extends React.Component<null, State>{
 
     formSubmitted: false,
     formError: false,
+    formLoading: false,
   };
 
-  _handleChange = (e) => {
+  _encode = (data: {[key: string]: string}): string => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&');
+  }
+
+  _handleChange = e => {
     this.setState({[e.target.name]: e.target.value});
   }
 
   _handleSubmit = e => {
+    const {fullname, email, year} = this.state;
+
     e.preventDefault();
 
-    const request: any = {
+    this.setState({formLoading: true});
+
+    // 1. Create mailing list subscription request.
+    const mailRequest: any = {
+      method: 'POST',
+      headers: {
+        'Origin': 'https://mailman.stanford.edu',
+        contentType: 'application/json',                
+      },
+      body: JSON.stringify({
+        'fullname': fullname,
+        'email': email,
+      }),
+    };
+
+    const mailPromise = fetch('https://saig-email-subscriber.herokuapp.com/subscribe', mailRequest);
+
+    // 2. Create netlify form request.
+    const netlifyRequest: any = {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: encode(
+      body: this._encode(
         Object.assign({
           'form-name': 'join-saig',
         }, this.state),
       ),
     };
 
-    fetch('/', request)
+    const netlifyPromise = fetch('/', netlifyRequest);
+
+    // 3. Send both, naively expect both to succeed
+    Promise.all([mailPromise, netlifyPromise])
       .then(() => {
         this.setState({formSubmitted: true});
       })
@@ -68,6 +93,16 @@ class JoinForm extends React.Component<null, State>{
             <h1>⚠️ There was an error!!</h1>
             <p>Please send a message to us on the SAIG Facebook Group to fix this. Do try again!</p>
           </div>
+        </div>
+      </div>
+    );
+  }
+
+  _renderLoading = () => {
+    return (
+      <div className="page">
+        <div className="join__container">
+          <div className="form__spinner" />
         </div>
       </div>
     );
@@ -134,7 +169,7 @@ class JoinForm extends React.Component<null, State>{
               </select>
             </div>
             <button className="form__submit" type="submit">Submit</button>
-            <p className="form_subtext">
+            <p className="form__subtext">
               <small>By submitting this form, you'll automatically be added to our mailing list.</small>
             </p>
           </form>
@@ -144,12 +179,14 @@ class JoinForm extends React.Component<null, State>{
   }
 
   render () {
-    const {formSubmitted, formError} = this.state;
+    const {formSubmitted, formError, formLoading} = this.state;
 
     if (formError) {
       return this._renderError();
     } else if (formSubmitted) {
       return this._renderSuccess();
+    } else if (formLoading) {
+      return this._renderLoading();
     } else {
       return this._renderForm();
     }

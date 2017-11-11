@@ -23,6 +23,7 @@
     "gatsby-transformer-remark": "^1.7.15",
     "human-date": "^1.4.0",
     "invariant": "^2.2.2",
+    "react-spinkit": "^3.0.0",
     "tslint": "^5.7.0"
   },
   "keywords": [
