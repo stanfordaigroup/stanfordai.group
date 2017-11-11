@@ -13,6 +13,9 @@ type State = {
   fullname: string,
   email: string,
   year: string,
+
+  formSubmitted: boolean,
+  formError: boolean,
 };
 
 class JoinForm extends React.Component<null, State>{
@@ -20,13 +23,16 @@ class JoinForm extends React.Component<null, State>{
     fullname: '',
     email: '',
     year: '',
+
+    formSubmitted: false,
+    formError: false,
   };
 
-  handleChange = (e) => {
+  _handleChange = (e) => {
     this.setState({[e.target.name]: e.target.value});
   }
 
-  handleSubmit = e => {
+  _handleSubmit = e => {
     e.preventDefault();
 
     const request: any = {
@@ -42,21 +48,54 @@ class JoinForm extends React.Component<null, State>{
     };
 
     fetch('/', request)
-      .then(() => alert('Success!'))
-      .catch(error => alert(error));
+      .then(() => {
+        this.setState({formSubmitted: true});
+      })
+      .catch(error => {
+        this.setState({formError: true});
 
-    navigateTo('/welcome');
+        console.error(error);
+      });
   };
 
-  render () {
+  _renderError = () => {
+    const {fullname} = this.state;
+  
+    return (
+      <div className="page">
+        <div className="join__container">
+          <div className="form__submitted">
+            <h1>⚠️ There was an error!!</h1>
+            <p>Please send a message to us on the SAIG Facebook Group to fix this. Do try again!</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  _renderSuccess = () => {
+    const {fullname} = this.state;
+  
+    return (
+      <div className="page">
+        <div className="join__container">
+          <div className="form__submitted">
+            <h1>Thanks for joining SAIG, {fullname}!</h1>
+            <p>Expect an email confirmation shortly asking you to join our mailing list. 😉</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  _renderForm = () => {
     return (
       <div className="page">
         <div className="join__container">
           <form
             className="form"
             name="join-saig"
-            action="/welcome"
-            onSubmit={this.handleSubmit}
+            onSubmit={this._handleSubmit}
             data-netlify="true"
             data-netlify-honeypot="bot-field"
           >
@@ -65,14 +104,14 @@ class JoinForm extends React.Component<null, State>{
               <label htmlFor="fullname">
                 <h3>Name <small>* Required</small></h3>
               </label>
-              <input id="fullname" type="text" onChange={this.handleChange} name="fullname" required placeholder="e.g., Machiney McLearnFace" />
+              <input id="fullname" type="text" onChange={this._handleChange} name="fullname" required placeholder="e.g., Machiney McLearnFace" />
             </div>
             <div className="form__block">
               <label htmlFor="email">
                 <h3>Email <small>* Required</small></h3>
                 <p>We'll invite you to our email list for news!</p>
               </label>
-              <input id="email" type="email" onChange={this.handleChange} name="email" required placeholder="e.g., firstlast@stanford.edu" />
+              <input id="email" type="email" onChange={this._handleChange} name="email" required placeholder="e.g., firstlast@stanford.edu" />
             </div>
             <div className="form__block">
               <label htmlFor="year">
@@ -82,7 +121,7 @@ class JoinForm extends React.Component<null, State>{
                 id="year"
                 className="form__year"
                 name="year"
-                onChange={this.handleChange}
+                onChange={this._handleChange}
                 value={this.state.year}
                 required
               >
@@ -102,6 +141,18 @@ class JoinForm extends React.Component<null, State>{
         </div>
       </div>
     );
+  }
+
+  render () {
+    const {formSubmitted, formError} = this.state;
+
+    if (formError) {
+      return this._renderError();
+    } else if (formSubmitted) {
+      return this._renderSuccess();
+    } else {
+      return this._renderForm();
+    }
   }
 }
 
