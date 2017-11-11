@@ -51,6 +51,8 @@ class JoinForm extends React.Component{
                 }, values)),
               };
 
+              console.log(netlifyRequest);
+
               const netlifyLogging = fetch("/", netlifyRequest)
                 .then(() => {})
                 .catch(error => console.error(error));
@@ -74,15 +76,9 @@ class JoinForm extends React.Component{
                 return (
                   <form
                     className="form"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
+                    name="join"
                     onSubmit={handleSubmit}
                   >
-                    <p hidden>
-                      <label>
-                        Don’t fill this out: <input name="bot-field" />
-                      </label>
-                    </p>
                     <div className="form__block">
                       <label htmlFor="fullname">
                         <h3>Name <small>* Required</small></h3>
