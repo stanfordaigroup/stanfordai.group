@@ -3,8 +3,7 @@ This repo hosts the [gatsby.js](https://www.gatsbyjs.org/)-based sourcecode for 
 
 ## Preview
 
-[![SAIG Site Preview](https://user-images.githubusercontent.com/10323195/31002798-8573ba40-a4a1-11e7-812d-33303fc42c1f.png)](http://stanfordai.group/)
-
+[![SAIG Site Preview](https://user-images.githubusercontent.com/10323195/32697079-baa2eb6a-c73c-11e7-9fc8-843fa8b42342.png)](http://stanfordai.group/)
 
 ## Tech Stack
 
