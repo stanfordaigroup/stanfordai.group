@@ -32,7 +32,7 @@ class IndexPage extends React.Component<null, State> {
     let role = '';
     let avatarClass = '';
 
-    if (personID > 0) {
+    if (personID > -1) {
       // Pick a random person
       const person = people[personID];
     
