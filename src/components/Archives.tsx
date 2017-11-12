@@ -6,9 +6,35 @@ const Archives: React.StatelessComponent = () => {
   return (
     <div className="archives">
       <div className="archives__header">
-        <div className="archives__count">4 past events</div>
+        <div className="archives__count">5 past events</div>
       </div>
       <div className="archives__list">
+        <div className="archives__item archives__item--speakers">
+          <div className="archives__item-dashes" />
+          <div className="archives__item-header">
+            <div className="archives__item-icon" />
+            <div className="archives__item-header-date">
+              <div className="archives__item-header-month">Nov</div>
+              <div className="archives__item-header-day">9</div>
+            </div>
+            <div className="archives__item-header-content">
+              <h1 className="archives__item-header-title">(Speaker) "Applications of Deep-Learning in Drug Discovery" with Bharath Ramsundar</h1>
+              <p className="archives__item-header-description">Bharath Ramsundar, a PhD student in Computer Science, will present his research on deep learning and other computational techniques for chemistry and medicine. Bharath received his Bachelor's degree in EECS and Mathematics from UC Berkeley and is now a part of Prof. Vijay Pande's lab at Stanford. He is the co-creator of DeepChem, which is the largest open-source toolchain that democratizes the use of deep-learning in drug discovery, materials science, quantum chemistry, and biology.</p>
+              <p className="archives__item-header-description">This event has no requirements, and will not be recorded.</p>
+            </div>
+          </div>
+          <div className="archives__item-content">
+            <h3>Slides</h3>
+            <ol>
+              <li><a href="https://stanfordai.group/17-11-9/slides.pdf">Presentation Slides</a></li>
+            </ol>
+            <h3>Emails</h3>
+            <ol>
+              <li><a href="https://stanfordai.group/17-11-9/email-1.html">Applications of Deep-Learning in Drug Discovery</a></li>
+            </ol>
+          </div>
+        </div>
+
         <div className="archives__item archives__item--workshops">
           <div className="archives__item-dashes" />
           <div className="archives__item-header">

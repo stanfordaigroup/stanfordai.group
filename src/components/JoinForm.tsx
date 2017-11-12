@@ -18,6 +18,7 @@ class JoinForm extends React.Component<null, State>{
     fullname: '',
     email: '',
     year: '',
+    major: '',
 
     formSubmitted: false,
     formError: false,
@@ -64,7 +65,7 @@ class JoinForm extends React.Component<null, State>{
       },
       body: this._encode(
         Object.assign({
-          'form-name': 'join-saig',
+          'form-name': 'join-saig-submission',
         }, this.state),
       ),
     };
@@ -129,12 +130,12 @@ class JoinForm extends React.Component<null, State>{
         <div className="join__container">
           <form
             className="form"
-            name="join-saig"
+            name="join-saig-submission"
             onSubmit={this._handleSubmit}
             data-netlify="true"
             data-netlify-honeypot="bot-field"
           >
-            <input type="hidden" name="form-name" value="join-saig" />
+            <input type="hidden" name="form-name" value="join-saig-submission" />
             <div className="form__block">
               <label htmlFor="fullname">
                 <h3>Name <small>* Required</small></h3>
@@ -167,6 +168,13 @@ class JoinForm extends React.Component<null, State>{
                 <option value="senior">Senior</option>
                 <option value="other">Other (Grad, PhD, etc.)</option>
               </select>
+            </div>
+            <div className="form__block">
+              <label htmlFor="major">
+                <h3>Major or Field of Study <small>* Required</small></h3>
+                <p>If not applicable, put your area of interest.</p>
+              </label>
+              <input id="major" type="text" onChange={this._handleChange} name="major" required placeholder="e.g., Computer Science" />
             </div>
             <button className="form__submit" type="submit">Submit</button>
             <p className="form__subtext">
