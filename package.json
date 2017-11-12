@@ -9,6 +9,7 @@
     "gatsby-cli": "^1.1.11",
     "gatsby-link": "^1.6.15",
     "gatsby-plugin-catch-links": "^1.0.8",
+    "gatsby-plugin-google-fonts": "^0.0.3",
     "gatsby-plugin-nprogress": "^1.0.7",
     "gatsby-plugin-purify-css": "^2.1.0",
     "gatsby-plugin-react-helmet": "^1.0.5",
