@@ -1,3 +1,7 @@
+/**
+ * join.tsx
+ */
+
 import * as React from 'react';
 import JoinForm from '../components/JoinForm';
 import PageHeader from '../components/PageHeader';

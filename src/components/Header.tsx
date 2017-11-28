@@ -1,3 +1,8 @@
+/**
+ * Header.tsx
+ * -> Renders the large homepage header.
+ */
+
 import * as React from 'react'
 import Link from 'gatsby-link'
 import HeaderNavBar from './HeaderNavBar'

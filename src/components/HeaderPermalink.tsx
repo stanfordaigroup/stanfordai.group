@@ -1,3 +1,8 @@
+/**
+ * HeaderPermalink.tsx
+ * -> Renders the non-homepage header (shorter, no hero text).
+ */
+
 import * as React from 'react';
 import Link from 'gatsby-link';
 import HeaderNavBar from './HeaderNavBar'

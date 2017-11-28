@@ -1,3 +1,8 @@
+/**
+ * PageHeader.tsx
+ * -> The current page's titlebar
+ */
+
 import * as React from 'react'
 
 import './PageHeader.scss'

@@ -1,3 +1,8 @@
+/**
+ * Calendar.tsx
+ * -> Renders a calendar that uses the current calendar.json data as input.
+ */
+
 import * as React from 'react';
 import CalendarEvent from './CalendarEvent';
 
@@ -18,21 +23,25 @@ export type Event = {
 
 type CalendarData = Array<Event>;
 
+// Import the current calendar data
 let calendarData: CalendarData = require('../calendar.json').data;
 
 calendarData = calendarData.sort((a, b): number => {
   return new Date(a.start.dateTime).getTime() - new Date(b.start.dateTime).getTime();
 });
 
-function formatAMPM(date: Date) {
+/**
+ * Returns a formatted data string.
+ * @param date inputted Date object
+ */
+function formatAMPM(date: Date): string {
   let hours = date.getHours();
-  let minutes = date.getMinutes();
+  let minutes = String(date.getMinutes());
   const ampm = hours >= 12 ? "pm" : "am";
 
   hours = hours % 12;
   hours = hours ? hours : 12;
-
-  minutes = minutes < 10 ? '0' + minutes : minutes;
+  minutes = Number(minutes) < 10 ? '0' + minutes : minutes;
 
   var strTime = hours + ":" + minutes + " " + ampm;
 

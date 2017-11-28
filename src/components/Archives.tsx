@@ -1,5 +1,9 @@
-import * as React from 'react'
+/**
+ * Archives.tsx
+ * -> This component is a manually updated list of information and data from our past events.
+ */
 
+import * as React from 'react'
 import './Archives.scss'
 
 const Archives: React.StatelessComponent = () => {

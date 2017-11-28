@@ -1,3 +1,8 @@
+/**
+ * JoinForm.tsx
+ * -> Renders the form that allows users to join SAIG.
+ */
+
 import * as React from 'react';
 import Link, {navigateTo} from 'gatsby-link';
 
@@ -25,17 +30,26 @@ class JoinForm extends React.Component<null, State>{
     formLoading: false,
   };
 
+  /**
+   * Encodes given state data into a uri component string
+   */
   _encode = (data: {[key: string]: string}): string => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
       .join('&');
   }
 
-  _handleChange = e => {
+  /**
+   * Manages changes to input and adjusts our component's state
+   */
+  _handleChange = (e: any) => {
     this.setState({[e.target.name]: e.target.value});
   }
 
-  _handleSubmit = e => {
+  /**
+   * Submits user data to Netlify and our custom server
+   */
+  _handleSubmit = (e: any) => {
     const {fullname, email, year} = this.state;
 
     e.preventDefault();

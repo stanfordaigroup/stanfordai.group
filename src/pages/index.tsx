@@ -1,3 +1,8 @@
+/**
+ * index.tsx
+ * -> The actual homepage content.
+ */
+
 import * as React from 'react';
 import Link from 'gatsby-link';
 import Header from '../components/Header';
@@ -16,11 +21,12 @@ type State = {
 
 class IndexPage extends React.Component<null, State> {
   state = {
-    personID: -1,
+    personID: -1, // Start showing nobody
   };
 
   componentDidMount() {
     this.setState({
+      // Choose a random person to show on the site
       personID: Math.floor(Math.random() * (people.length)),
     });
   }

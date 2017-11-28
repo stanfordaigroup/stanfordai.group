@@ -1,3 +1,8 @@
+/**
+ * CalendarEvent.tsx
+ * -> Used by <Calendar> to display an event item.
+ */
+
 import * as React from 'react';
 
 type Props = {

@@ -1,3 +1,8 @@
+/**
+ * HeaderNavBar.tsx
+ * -> Renders the navbar in our header.
+ */
+
 import * as React from 'react';
 import Link from 'gatsby-link';
 

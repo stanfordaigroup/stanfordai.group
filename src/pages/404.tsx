@@ -1,3 +1,8 @@
+/**
+ * 404.tsx
+ * -> Renders whenever a user encounters a 404
+ */
+
 import  * as React from 'react'
 
 import './404.scss';

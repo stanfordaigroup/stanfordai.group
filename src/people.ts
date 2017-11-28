@@ -1,3 +1,8 @@
+/**
+ * people.ts
+ * -> Holds current board members of SAIG.
+ */
+
 type Person = {
   id: string,
   name: string,
