@@ -2,10 +2,28 @@
 This repo hosts the [gatsby.js](https://www.gatsbyjs.org/)-based sourcecode for the [Stanford AI Group website (SAIG)](http://stanfordai.group/). Currently, the site is hosted on [Netlify](https://www.netlify.com/). It's set up so that any changes to `master` cause the website to rebuild.
 
 ## Tech Stack
+- The website is built on [gatsby.js](https://www.gatsbyjs.org/), a front-end static site creator (meaning we don’t have a dedicated server setup behind it). This means that we can build our site using [React](https://reactjs.org/), while still serving a fast-loading site that’s pre-built. Check out the [gatsby documentation](https://www.gatsbyjs.org/docs/) for information on how it works.
+- Our javascript code is written in [Typescript](https://www.typescriptlang.org/), Microsoft’s type-enabled superset of Javascript.
+- Our stylesheets are written in [Sass](http://sass-lang.com/).
+- Dynamic pages (like the calendar) are based on React components (e.g., [../components/Calendar.tsx](https://github.com/stanfordaigroup/stanfordai.group/blob/master/src/components/Calendar.tsx)). Static pages (like the about page, constitution) are Markdown files rendered by gatsby (e.g., [../consitution/index.md](https://github.com/stanfordaigroup/stanfordai.group/blob/master/src/pages/constitution/index.md)) in a [PermalinkPage template](https://github.com/stanfordaigroup/stanfordai.group/blob/master/src/templates/PermalinkPage.tsx).
+- We host our site’s code publicly on GitHub, and host the live build on Netlify (see below).
 
-- Built on [gatsby.js](https://www.gatsbyjs.org/), which uses [Webpack](https://webpack.js.org/) and [React](https://reactjs.org/).
-- Written in [Typescript](https://www.typescriptlang.org/) and [Sass](http://sass-lang.com/).
-- Uses [remark](https://github.com/wooorm/remark) for Markdown processing.
+We're using various [Gatsby Plugins](https://www.gatsbyjs.org/docs/plugins/):
+```
+gatsby-plugin-react-next          # Early access to React v.16.
+gatsby-plugin-catch-links         # Intercepts links in markdown pages for pushState browser loading.
+gatsby-plugin-react-helmet        # Used to manage <header> contents
+gatsby-plugin-sass                # Self-explanatory.
+gatsby-plugin-typescript          # Self-explanatory.
+gatsby-source-filesystem          # Lets us access pages through GraphQL
+gatsby-transformer-remark         # Our markdown processor (and associated sub-plugins)
+gatsby-plugin-google-fonts        # Used for Roboto font.
+gatsby-plugin-purify-css          # Minifies and removed unused CSS code.
+gatsby-plugin-sitemap             # Self-explanatory
+gatsby-plugin-nprogress           # Adds a progress bar to the top of page when server is slow.
+```
+
+While appearing like there's a lot going on, this website is pretty barebones in terms of functionality. What the user gets from the server when going to `stanfordai.group` is a [static website](https://en.wikipedia.org/wiki/Static_web_page) which is a copy of what's rendered from our React.js components. What's special is that gatsby then [hydrates](https://reactjs.org/docs/react-dom.html#hydrate) the static react components and allow us to add dynamic functionality. What this means is we get faster load times, better SEO, and a system that doesn't require us to use a server/backend.
 
 ## Making Changes
 
