@@ -17,6 +17,8 @@ type Props = {
 };
 
 const Calendar: React.StatelessComponent<Props> = props => {
+  // If we get a link in our props, we render the component as a link to the event url (likely a FB event).
+  
   if (props.url) {
     return (
       <a
