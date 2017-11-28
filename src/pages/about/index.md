@@ -19,9 +19,6 @@ Founded in 2017, Student AI Group (SAIG) is a student organization at Stanford U
 ##### Chief Financial Officer
 **Tucker Haas**
 
-##### Vice President of Public Relations
-**Andrew S. Lee**
-
 ##### Vice Presidents of Operations
 **Joseph Nicolls**, **Roma Dziembaj**
 
@@ -35,4 +32,4 @@ Founded in 2017, Student AI Group (SAIG) is a student organization at Stanford U
 
 ### Colophon
 
-Website created by [Andrew S. Lee](https://andrewlee.design/), open source on [GitHub](https://github.com/andrewsoohwanlee/stanfordai.group).
+Website originally designed and created by [Andrew S. Lee](https://andrewlee.design/), open source on [GitHub](https://github.com/stanfordaigroup/stanfordai.group).
