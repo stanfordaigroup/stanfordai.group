@@ -21,11 +21,6 @@ const people: Array<Person> = [
     role: 'Chief Financial Officer',
   },
   {
-    id: 'asl',
-    name: 'Andrew S. Lee',
-    role: 'Vice President of Public Relations',
-  },
-  {
     id: 'joseph',
     name: 'Joseph Nicolls',
     role: 'Vice President of Operations',
