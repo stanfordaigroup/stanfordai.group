@@ -67,14 +67,6 @@
   }
 }
 
-.messages__avatar--asl {
-  background-image: url('../layouts/images/avatar-andrew.png');
-
-  @include resolution(2) {
-    background-image: url('../layouts/images/avatar-andrew@2x.png');
-  }
-}
-
 .messages__avatar--tucker {
   background-image: url('../layouts/images/avatar-tucker.png');
 
