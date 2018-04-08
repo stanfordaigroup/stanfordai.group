@@ -36,9 +36,9 @@ const people: Array<Person> = [
     role: 'Vice President of Technical Education',
   },
   {
-    id: 'prasad',
-    name: 'Prasad Kawthekar',
-    role: 'Vice President of Technical Education',
+    id: 'yatharth',
+    name: 'Yatharth Agarwal',
+    role: 'Vice President of Public Relations',
   },
   {
     id: 'shubhang',
