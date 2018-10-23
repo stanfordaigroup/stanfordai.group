@@ -5,9 +5,9 @@ title: "About"
 subtitle: "SAIG is community to engage with artificial intelligence, right now. 👇"
 ---
 
-Founded in 2017, Student AI Group (SAIG) is a student organization at Stanford University. At its core, SAIG works to connect students to opportunities in the growing field of Artificial Intelligence.
+Stanford AI Group (SAIG) is a student organization at Stanford to connect students with opportunities in the growing field of Artificial Intelligence.
 
-[Our constitution is publicly available 📜](constitution).
+[Our constitution is publicly available 📜](https://orgsync.com/home/521).
 
 ---
 
@@ -41,7 +41,5 @@ Founded in 2017, Student AI Group (SAIG) is a student organization at Stanford U
 
 
 ---
-
-### Colophon
 
 Website originally designed and created by [Andrew S. Lee](https://andrewlee.design/), open source on [GitHub](https://github.com/stanfordaigroup/stanfordai.group).
