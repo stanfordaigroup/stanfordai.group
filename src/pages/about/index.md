@@ -26,17 +26,21 @@ Stanford AI Group (SAIG) is a student organization at Stanford to connect studen
 [**Emily Hu**](mailto:xehu@stanford.edu)
 
 ##### Chief Financial Officers
-[**Tucker Haas**](mailto:thaas19@stanford.edu)<br/>
+[**Tucker Haas**](mailto:thaas19@stanford.edu)
+
 [**Kylee Krzanich**](mailto:krzanich@stanford.edu)
 
 
 ##### Vice Presidents of Technical Education
-[**Shubhang Desai**](mailto:shubhang@stanford.edu)<br/>
-[**Swetha Revanur**](mailto:srevanur@stanford.edu)<br/>
+[**Shubhang Desai**](mailto:shubhang@stanford.edu)
+
+[**Swetha Revanur**](mailto:srevanur@stanford.edu)
+
 [**John Romano**](mailto:jromano@stanford.edu)
 
 ##### Vice Presidents of Ethical Discussion
-[**Sawyer Birnbaum**](mailto:sawyerb@stanford.edu)<br/>
+[**Sawyer Birnbaum**](mailto:sawyerb@stanford.edu)
+
 [**Andrew Lesh**](mailto:aclesh@stanford.edu)
 
 
