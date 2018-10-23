@@ -21,11 +21,6 @@ const people: Array<Person> = [
     role: 'Chief Financial Officer',
   },
   {
-    id: 'joseph',
-    name: 'Joseph Nicolls',
-    role: 'Vice President of Operations',
-  },
-  {
     id: 'roma',
     name: 'Roma Dziembaj',
     role: 'Vice President of Operations',
@@ -36,14 +31,19 @@ const people: Array<Person> = [
     role: 'Vice President of Technical Education',
   },
   {
+    id: 'swetha',
+    name: 'Swetha Revanur',
+    role: 'Vice President of Technical Education (Workshops)',
+  },
+  {
     id: 'yatharth',
     name: 'Yatharth Agarwal',
-    role: 'Vice President of Public Relations',
+    role: 'Co-President and Vice President of Operations',
   },
   {
     id: 'shubhang',
     name: 'Shubhang Desai',
-    role: 'Vice President of Technical Education',
+    role: 'Vice President of Technical Education (AI + Social Good)',
   },
   {
     id: 'andrewlesh',
@@ -51,9 +51,14 @@ const people: Array<Person> = [
     role: 'Vice President of Ethical Education',
   },
   {
-    id: 'dylan',
-    name: 'Dylan Bedford',
+    id: 'sawyer',
+    name: 'Sawyer Birnbaum',
     role: 'Vice President of Ethical Education',
+  },
+  {
+    id: 'emily',
+    name: 'Emily Hu',
+    role: 'Vice President of Public Relations',
   },
 ];
 
