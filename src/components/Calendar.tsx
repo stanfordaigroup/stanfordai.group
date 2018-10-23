@@ -77,7 +77,7 @@ const Calendar: React.StatelessComponent = () => {
 
             const url = urlRegex.exec(event.description);
 
-            const parsedDescription = event.description.replace(urlRegex, '');
+            const parsedDescription = event.description ? event.description.replace(urlRegex, "") : "";
 
             return (
               <CalendarEvent
