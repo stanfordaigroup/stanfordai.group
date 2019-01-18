@@ -2,10 +2,12 @@
 path: "/about"
 date: "2017-07-12T17:12:33.962Z"
 title: "About"
-subtitle: "SAIG is community to engage with artificial intelligence, right now. 👇"
+subtitle: "The Stanford AI Group (SAIG) is community to engage with artificial intelligence, right now. 👇"
 ---
 
-Stanford AI Group (SAIG) is a student organization at Stanford to connect students with opportunities in the growing field of Artificial Intelligence.
+SAIG is a student organization at Stanford to connect students with opportunities in the growing field of Artificial Intelligence. We host ethical discussions and bring in industry leaders in data science and machine learning to talk about the future of AI in health, education, and research.
+
+SAIG also holds technical workshops for Stanford students to gain exposure to the most modern machine learning frameworks and experience working with various statistical learning models.
 
 [Our constitution is publicly available 📜](https://orgsync.com/home/521).
 
@@ -29,7 +31,6 @@ Stanford AI Group (SAIG) is a student organization at Stanford to connect studen
 [**Tucker Haas**](mailto:thaas19@stanford.edu)
 
 [**Kylee Krzanich**](mailto:krzanich@stanford.edu)
-
 
 ##### Vice Presidents of Technical Education
 [**Shubhang Desai**](mailto:shubhang@stanford.edu)
