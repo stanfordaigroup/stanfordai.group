@@ -14,20 +14,19 @@ import './index.css';
 import './normalize.css';
 
 type Props = {
-  children: () => {},
+  children: React.ReactNode,
   location: {
     pathname: string,
   },
 };
 
-const TemplateWrapper: React.StatelessComponent<Props> = props => {
-  const {location} = props;
-
+const TemplateWrapper = (props: Props) => {
+  const {children, location} = props;
   return (
     <div>
       <Helmet title="Student AI Group (SAIG)" />
       {location.pathname === '/' ? <Header /> : <HeaderPermalink pathname={location.pathname} />}
-      {props.children()}
+      {children}
       <Footer />
     </div>
   );

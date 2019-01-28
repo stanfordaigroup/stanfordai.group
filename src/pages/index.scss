@@ -36,15 +36,20 @@
 }
 
 .messages__avatar-title {
+  align-items: flex-end;
   color: #fff;
+  display: flex;
   font-size: 11px;
+  height: 30px;
   left: 12px;
   opacity: 0.6;
   position: absolute;
-  top: -20px;
+  top: -36px;
 }
 
 .messages__avatar {
+  background-image: url('../layouts/images/avatar-unknown.png');
+  background-color: #fff;
   background-repeat: no-repeat;
   border-radius: 100%;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
@@ -55,6 +60,7 @@
   width: 30px;
 
   @include resolution(2) {
+    background-image: url('../layouts/images/avatar-unknown@2x.png');
     background-size: 30px 30px;
   }
 }
@@ -253,6 +259,12 @@
   width: 22px;
 
   transition: transform 200ms ease;
+}
+
+.messages__message-facebook h3::before {
+  background-size: 11px 22px;
+  left: 24px;
+  width: 11px;
 }
 
 .messages__message-slack:hover h3::before,
