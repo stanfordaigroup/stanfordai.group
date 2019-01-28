@@ -4,7 +4,6 @@ module.exports = {
     siteUrl: `http://stanfordai.group`,
   },
   plugins: [
-    `gatsby-plugin-react-next`,
     `gatsby-plugin-catch-links`,
   	`gatsby-plugin-react-helmet`,
   	`gatsby-plugin-sass`,
@@ -42,12 +41,6 @@ module.exports = {
           `Roboto\:400,400i,700,700i`,
         ],
       },
-    },
-    {
-      resolve: 'gatsby-plugin-purify-css',
-      options: {
-        purifyOptions: {}
-      }
     },
     {
       resolve: `gatsby-plugin-sitemap`

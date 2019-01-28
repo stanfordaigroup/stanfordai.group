@@ -7,7 +7,7 @@ import * as React from 'react';
 import Link from 'gatsby-link';
 import HeaderNavBar from './HeaderNavBar'
 
-const Logo = require('../layouts/images/logo.svg');
+import Logo from '../layouts/images/logo.svg';
 
 import './Header.scss'
 
